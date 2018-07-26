@@ -1,0 +1,2 @@
+int string app_name 0x7f150001
+int string preference_file_key 0x7f150002

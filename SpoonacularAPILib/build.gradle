@@ -1,0 +1,26 @@
+apply plugin: 'com.android.library'
+
+android {
+    //update the following to match your sdk and build tools versions
+    compileSdkVersion 27
+    buildToolsVersion "27.0.3"
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.mcxiaoke.volley:library:1.0.18'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.8.6'
+    implementation 'org.apache.httpcomponents:httpcore:4.4.3'
+    implementation 'org.apache.httpcomponents:httpmime:4.3.6'
+}

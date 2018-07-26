@@ -1,0 +1,47 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\AndroidWorkspace\Capston-Project\SpoonacularAPILib\src\main\AndroidManifest.xml:6:1-14:12
+INJECTED from D:\AndroidWorkspace\Capston-Project\SpoonacularAPILib\src\main\AndroidManifest.xml:6:1-14:12
+INJECTED from D:\AndroidWorkspace\Capston-Project\SpoonacularAPILib\src\main\AndroidManifest.xml:6:1-14:12
+INJECTED from D:\AndroidWorkspace\Capston-Project\SpoonacularAPILib\src\main\AndroidManifest.xml:6:1-14:12
+INJECTED from D:\AndroidWorkspace\Capston-Project\SpoonacularAPILib\src\main\AndroidManifest.xml:6:1-14:12
+INJECTED from D:\AndroidWorkspace\Capston-Project\SpoonacularAPILib\src\main\AndroidManifest.xml:6:1-14:12
+INJECTED from D:\AndroidWorkspace\Capston-Project\SpoonacularAPILib\src\main\AndroidManifest.xml:6:1-14:12
+	package
+		ADDED from D:\AndroidWorkspace\Capston-Project\SpoonacularAPILib\src\main\AndroidManifest.xml:7:5-61
+		INJECTED from D:\AndroidWorkspace\Capston-Project\SpoonacularAPILib\src\main\AndroidManifest.xml
+		INJECTED from D:\AndroidWorkspace\Capston-Project\SpoonacularAPILib\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from D:\AndroidWorkspace\Capston-Project\SpoonacularAPILib\src\main\AndroidManifest.xml
+		ADDED from D:\AndroidWorkspace\Capston-Project\SpoonacularAPILib\src\main\AndroidManifest.xml:6:1-14:12
+		INJECTED from D:\AndroidWorkspace\Capston-Project\SpoonacularAPILib\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from D:\AndroidWorkspace\Capston-Project\SpoonacularAPILib\src\main\AndroidManifest.xml
+		ADDED from D:\AndroidWorkspace\Capston-Project\SpoonacularAPILib\src\main\AndroidManifest.xml:6:1-14:12
+		INJECTED from D:\AndroidWorkspace\Capston-Project\SpoonacularAPILib\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\AndroidWorkspace\Capston-Project\SpoonacularAPILib\src\main\AndroidManifest.xml:6:11-69
+uses-permission#android.permission.INTERNET
+ADDED from D:\AndroidWorkspace\Capston-Project\SpoonacularAPILib\src\main\AndroidManifest.xml:8:5-67
+	android:name
+		ADDED from D:\AndroidWorkspace\Capston-Project\SpoonacularAPILib\src\main\AndroidManifest.xml:8:22-64
+application
+ADDED from D:\AndroidWorkspace\Capston-Project\SpoonacularAPILib\src\main\AndroidManifest.xml:9:5-12:19
+	android:label
+		ADDED from D:\AndroidWorkspace\Capston-Project\SpoonacularAPILib\src\main\AndroidManifest.xml:10:9-41
+	android:allowBackup
+		ADDED from D:\AndroidWorkspace\Capston-Project\SpoonacularAPILib\src\main\AndroidManifest.xml:9:18-44
+uses-sdk
+INJECTED from D:\AndroidWorkspace\Capston-Project\SpoonacularAPILib\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\AndroidWorkspace\Capston-Project\SpoonacularAPILib\src\main\AndroidManifest.xml
+INJECTED from D:\AndroidWorkspace\Capston-Project\SpoonacularAPILib\src\main\AndroidManifest.xml
+INJECTED from D:\AndroidWorkspace\Capston-Project\SpoonacularAPILib\src\main\AndroidManifest.xml
+INJECTED from D:\AndroidWorkspace\Capston-Project\SpoonacularAPILib\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from D:\AndroidWorkspace\Capston-Project\SpoonacularAPILib\src\main\AndroidManifest.xml
+		ADDED from D:\AndroidWorkspace\Capston-Project\SpoonacularAPILib\src\main\AndroidManifest.xml
+		INJECTED from D:\AndroidWorkspace\Capston-Project\SpoonacularAPILib\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\AndroidWorkspace\Capston-Project\SpoonacularAPILib\src\main\AndroidManifest.xml
+		ADDED from D:\AndroidWorkspace\Capston-Project\SpoonacularAPILib\src\main\AndroidManifest.xml
+		INJECTED from D:\AndroidWorkspace\Capston-Project\SpoonacularAPILib\src\main\AndroidManifest.xml

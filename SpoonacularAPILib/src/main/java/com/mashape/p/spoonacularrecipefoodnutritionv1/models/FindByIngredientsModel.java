@@ -120,6 +120,6 @@ public class FindByIngredientsModel
         this.usedIngredientCount = value;
         notifyObservers(this.usedIngredientCount);
     }
- 
+
 }
  

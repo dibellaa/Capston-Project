@@ -1,0 +1,372 @@
+{
+	"vegetarian":true,
+	"vegan":false,
+	"glutenFree":false,
+	"dairyFree":true,
+	"veryHealthy":false,
+	"cheap":false,
+	"veryPopular":false,
+	"sustainable":false,
+	"weightWatcherSmartPoints":7,
+	"gaps":"no",
+	"lowFodmap":false,
+	"ketogenic":false,
+	"whole30":false,
+	"preparationMinutes":5,
+	"cookingMinutes":0,
+	"sourceUrl":"http://en.julskitchen.com/other/life/apple-fritters",
+	"spoonacularSourceUrl":"https://spoonacular.com/apple-fritters-556470",
+	"aggregateLikes":243,
+	"spoonacularScore":33.0,
+	"healthScore":2.0,
+	"creditText":"Jul's Kitchen",
+	"sourceName":"Jul's Kitchen",
+	"pricePerServing":122.5,
+	"extendedIngredients":[
+		{
+			"id":14003,
+			"aisle":"Alcoholic Beverages",
+			"image":"beer.jpg",
+			"consitency":"liquid",
+			"name":"beer",
+			"original":"2 tablespoons of lager beer",
+			"originalString":"2 tablespoons of lager beer",
+			"originalName":null,
+			"amount":2.0,
+			"unit":"tablespoons",
+			"meta":[
+			],
+			"metaInformation":[
+			],
+			"measures":{
+				"us":{
+					"amount":2.0,
+					"unitShort":"Tbsps",
+					"unitLong":"Tbsps"
+				},
+				"metric":{
+					"amount":2.0,
+					"unitShort":"Tbsps",
+					"unitLong":"Tbsps"
+				}
+			}
+		},
+		{
+			"id":1123,
+			"aisle":"Milk, Eggs, Other Dairy",
+			"image":"egg.jpg",
+			"consitency":"solid",
+			"name":"egg",
+			"original":"1 egg",
+			"originalString":"1 egg",
+			"originalName":null,
+			"amount":1.0,
+			"unit":"",
+			"meta":[
+			],
+			"metaInformation":[
+			],
+			"measures":{
+				"us":{
+					"amount":1.0,
+					"unitShort":"",
+					"unitLong":""
+				},
+				"metric":{
+					"amount":1.0,
+					"unitShort":"",
+					"unitLong":""
+				}
+			}
+		},
+		{
+			"id":1034053,
+			"aisle":"Oil, Vinegar, Salad Dressing",
+			"image":"olive-oil.jpg",
+			"consitency":"liquid",
+			"name":"extra virgin olive oil",
+			"original":"1 tablespoon of extra virgin olive oil",
+			"originalString":"1 tablespoon of extra virgin olive oil",
+			"originalName":null,
+			"amount":1.0,
+			"unit":"tablespoon",
+			"meta":[
+			],
+			"metaInformation":[
+			],
+			"measures":{
+				"us":{
+					"amount":1.0,
+					"unitShort":"Tbsp",
+					"unitLong":"Tbsp"
+				},
+				"metric":{
+					"amount":1.0,
+					"unitShort":"Tbsp",
+					"unitLong":"Tbsp"
+				}
+			}
+		},
+		{
+			"id":20081,
+			"aisle":"Baking",
+			"image":"flour.png",
+			"consitency":"solid",
+			"name":"flour",
+			"original":"2 tablespoons of flour",
+			"originalString":"2 tablespoons of flour",
+			"originalName":null,
+			"amount":2.0,
+			"unit":"tablespoons",
+			"meta":[
+			],
+			"metaInformation":[
+			],
+			"measures":{
+				"us":{
+					"amount":2.0,
+					"unitShort":"Tbsps",
+					"unitLong":"Tbsps"
+				},
+				"metric":{
+					"amount":2.0,
+					"unitShort":"Tbsps",
+					"unitLong":"Tbsps"
+				}
+			}
+		},
+		{
+			"id":4042,
+			"aisle":"Oil, Vinegar, Salad Dressing",
+			"image":"peanut-oil.jpg",
+			"consitency":"liquid",
+			"name":"peanut oil",
+			"original":"peanut oil for frying",
+			"originalString":"peanut oil for frying",
+			"originalName":null,
+			"amount":2.0,
+			"unit":"servings",
+			"meta":[
+				"for frying"
+			],
+			"metaInformation":[
+				"for frying"
+			],
+			"measures":{
+				"us":{
+					"amount":2.0,
+					"unitShort":"servings",
+					"unitLong":"servings"
+				},
+				"metric":{
+					"amount":2.0,
+					"unitShort":"servings",
+					"unitLong":"servings"
+				}
+			}
+		},
+		{
+			"id":1059003,
+			"aisle":"Produce",
+			"image":"red-delicious-apples.png",
+			"consitency":"solid",
+			"name":"red delicious apples",
+			"original":"2 Golden Delicious apples",
+			"originalString":"2 Golden Delicious apples",
+			"originalName":null,
+			"amount":2.0,
+			"unit":"",
+			"meta":[
+			],
+			"metaInformation":[
+			],
+			"measures":{
+				"us":{
+					"amount":2.0,
+					"unitShort":"",
+					"unitLong":""
+				},
+				"metric":{
+					"amount":2.0,
+					"unitShort":"",
+					"unitLong":""
+				}
+			}
+		},
+		{
+			"id":2047,
+			"aisle":"Spices and Seasonings",
+			"image":"salt.jpg",
+			"consitency":"solid",
+			"name":"salt",
+			"original":"1 pinch of salt",
+			"originalString":"1 pinch of salt",
+			"originalName":null,
+			"amount":1.0,
+			"unit":"pinch",
+			"meta":[
+			],
+			"metaInformation":[
+			],
+			"measures":{
+				"us":{
+					"amount":1.0,
+					"unitShort":"pinch",
+					"unitLong":"pinch"
+				},
+				"metric":{
+					"amount":1.0,
+					"unitShort":"pinch",
+					"unitLong":"pinch"
+				}
+			}
+		},
+		{
+			"id":19335,
+			"aisle":"Baking",
+			"image":"sugar-cubes.jpg",
+			"consitency":"solid",
+			"name":"sugar",
+			"original":"sugar to decorate",
+			"originalString":"sugar to decorate",
+			"originalName":null,
+			"amount":2.0,
+			"unit":"servings",
+			"meta":[
+			],
+			"metaInformation":[
+			],
+			"measures":{
+				"us":{
+					"amount":2.0,
+					"unitShort":"servings",
+					"unitLong":"servings"
+				},
+				"metric":{
+					"amount":2.0,
+					"unitShort":"servings",
+					"unitLong":"servings"
+				}
+			}
+		}
+	],
+"id":556470,
+"title":"Apple fritters",
+"readyInMinutes":5,
+"servings":2,
+"image":"https://spoonacular.com/recipeImages/556470-556x370.jpg",
+"imageType":"jpg",
+"cuisines":[
+],
+"dishTypes":[
+	"morning meal",
+	"brunch",
+	"breakfast"
+],
+"diets":[
+	"dairy free",
+	"lacto ovo vegetarian"
+],
+"occasions":[
+],
+"winePairing":{
+	"pairedWines":[
+	],
+	"pairingText":"",
+	"productMatches":[
+	]
+},
+"instructions":"Beat the egg in a bowl, add a pinch of salt and the flour and pour in the extra virgin olive oil and the beer: if needed, add a tablespoon of water to make a smooth but not too liquid batter. It is supposed to cover the apples, not to slide off!Peel the apples, core them paying attention not to break them and cut the apples into horizontal slices, 1 cm thick.Heat the olive oil in a large frying pan. The right moment to fry the apples is when the oil starts to smoke, as grandma says. Dip the apple slices into the batter and deep fry them until cooked through and golden on both sides.Transfer the apples into a plate lined with a paper towel. Sprinkle the fritters with icing sugar and serve them warm.",
+"analyzedInstructions":[
+	{
+		"name":"",
+		"steps":[
+			{
+				"number":1,
+				"step":"Beat the egg in a bowl, add a pinch of salt and the flour and pour in the extra virgin olive oil and the beer: if needed, add a tablespoon of water to make a smooth but not too liquid batter. It is supposed to cover the apples, not to slide off!Peel the apples, core them paying attention not to break them and cut the apples into horizontal slices, 1 cm thick.",
+				"ingredients":[
+					{
+						"id":1034053,
+						"name":"extra virgin olive oil",
+						"image":"olive-oil.jpg"
+					},
+					{
+						"id":9003,
+						"name":"apple",
+						"image":"apple.jpg"
+					},
+					{
+						"id":20081,
+						"name":"all purpose flour",
+						"image":"flour.png"
+					},
+					{
+						"id":14003,
+						"name":"beer",
+						"image":"beer.jpg"
+					},
+					{
+						"id":2047,
+						"name":"salt",
+						"image":"salt.jpg"
+					},
+					{
+						"id":1123,
+						"name":"egg",
+						"image":"egg.jpg"
+					}
+				],
+				"equipment":[
+					{
+						"id":404783,
+						"name":"bowl",
+						"image":"bowl.jpg"
+					}
+				]
+			},
+			{
+				"number":2,
+				"step":"Heat the olive oil in a large frying pan. The right moment to fry the apples is when the oil starts to smoke, as grandma says. Dip the apple slices into the batter and deep fry them until cooked through and golden on both sides.",
+				"ingredients":[
+					{
+						"id":4053,
+						"name":"olive oil",
+						"image":"olive-oil.jpg"
+					},
+					{
+						"id":9003,
+						"name":"apple",
+						"image":"apple.jpg"
+					}
+				],
+				"equipment":[
+					{
+						"id":404645,
+						"name":"frying pan",
+						"image":"pan.png"
+					}
+				]
+			},
+			{
+				"number":3,
+				"step":"Transfer the apples into a plate lined with a paper towel. Sprinkle the fritters with icing sugar and serve them warm.",
+				"ingredients":[
+					{
+						"id":9003,
+						"name":"apple",
+						"image":"apple.jpg"
+					}
+				],
+				"equipment":[
+					{
+						"id":405895,
+						"name":"paper towels",
+						"image":"paper-towels.jpg"
+					}
+				]
+			}
+		]
+	}
+],
+"creditsText":"Jul's Kitchen"
+}

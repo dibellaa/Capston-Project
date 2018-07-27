@@ -1,0 +1,457 @@
+{
+	"vegetarian":true,
+	"vegan":false,
+	"glutenFree":false,
+	"dairyFree":false,
+	"veryHealthy":false,
+	"cheap":false,
+	"veryPopular":false,
+	"sustainable":false,
+	"weightWatcherSmartPoints":11,
+	"gaps":"no",
+	"lowFodmap":false,
+	"ketogenic":false,
+	"whole30":false,
+	"sourceUrl":"http://sarahscucinabella.com/2010/10/06/brown-butter-apple-crumble/",
+	"spoonacularSourceUrl":"https://spoonacular.com/brown-butter-apple-crumble-534573",
+	"aggregateLikes":7,
+	"spoonacularScore":20.0,
+	"healthScore":2.0,
+	"creditText":"Sarahs Cucina Bella",
+	"sourceName":"Sarahs Cucina Bella",
+	"pricePerServing":84.01,
+	"extendedIngredients":[
+		{
+			"id":9003,
+			"aisle":"Produce",
+			"image":"apple.jpg",
+			"consitency":"solid",
+			"name":"apples",
+			"original":"4 apples, peeled, cored and sliced",
+			"originalString":"4 apples, peeled, cored and sliced",
+			"originalName":null,
+			"amount":4.0,
+			"unit":"",
+			"meta":[
+				"cored",
+				"peeled",
+				"sliced"
+			],
+			"metaInformation":[
+				"cored",
+				"peeled",
+				"sliced"
+			],
+			"measures":{
+				"us":{
+					"amount":4.0,
+					"unitShort":"",
+					"unitLong":""
+				},
+				"metric":{
+					"amount":4.0,
+					"unitShort":"",
+					"unitLong":""
+				}
+			}
+		},
+		{
+			"id":2010,
+			"aisle":"Spices and Seasonings",
+			"image":"cinnamon.jpg",
+			"consitency":"solid",
+			"name":"cinnamon",
+			"original":"1/2 tsp cinnamon",
+			"originalString":"1/2 tsp cinnamon",
+			"originalName":null,
+			"amount":0.5,
+			"unit":"tsp",
+			"meta":[
+			],
+			"metaInformation":[
+			],
+			"measures":{
+				"us":{
+					"amount":0.5,
+					"unitShort":"tsps",
+					"unitLong":"teaspoons"
+				},
+				"metric":{
+					"amount":0.5,
+					"unitShort":"tsps",
+					"unitLong":"teaspoons"
+				}
+			}
+		},
+		{
+			"id":20081,
+			"aisle":"Baking",
+			"image":"flour.png",
+			"consitency":"solid",
+			"name":"flour",
+			"original":"1/4 cup all-purpose flour",
+			"originalString":"1/4 cup all-purpose flour",
+			"originalName":null,
+			"amount":0.25,
+			"unit":"cup",
+			"meta":[
+				"all-purpose"
+			],
+			"metaInformation":[
+				"all-purpose"
+			],
+			"measures":{
+				"us":{
+					"amount":0.25,
+					"unitShort":"cups",
+					"unitLong":"cups"
+				},
+				"metric":{
+					"amount":59.147,
+					"unitShort":"g",
+					"unitLong":"grams"
+				}
+			}
+		},
+		{
+			"id":19334,
+			"aisle":"Baking",
+			"image":"brown-sugar-light.jpg",
+			"consitency":"solid",
+			"name":"light brown sugar",
+			"original":"1/4 cup light brown sugar",
+			"originalString":"1/4 cup light brown sugar",
+			"originalName":null,
+			"amount":0.25,
+			"unit":"cup",
+			"meta":[
+				"light"
+			],
+			"metaInformation":[
+				"light"
+			],
+			"measures":{
+				"us":{
+					"amount":0.25,
+					"unitShort":"cups",
+					"unitLong":"cups"
+				},
+				"metric":{
+					"amount":59.147,
+					"unitShort":"g",
+					"unitLong":"grams"
+				}
+			}
+		},
+		{
+			"id":8120,
+			"aisle":"Cereal",
+			"image":"rolled-oats.jpg",
+			"consitency":"solid",
+			"name":"oats",
+			"original":"1/2 cup uncooked oats (not instant)",
+			"originalString":"1/2 cup uncooked oats (not instant)",
+			"originalName":null,
+			"amount":0.5,
+			"unit":"cup",
+			"meta":[
+				"uncooked",
+				"(not instant)"
+			],
+			"metaInformation":[
+				"uncooked",
+				"(not instant)"
+			],
+			"measures":{
+				"us":{
+					"amount":0.5,
+					"unitShort":"cups",
+					"unitLong":"cups"
+				},
+				"metric":{
+					"amount":118.294,
+					"unitShort":"g",
+					"unitLong":"grams"
+				}
+			}
+		},
+		{
+			"id":2047,
+			"aisle":"Spices and Seasonings",
+			"image":"salt.jpg",
+			"consitency":"solid",
+			"name":"salt",
+			"original":"pinch salt",
+			"originalString":"pinch salt",
+			"originalName":null,
+			"amount":1.0,
+			"unit":"pinch",
+			"meta":[
+			],
+			"metaInformation":[
+			],
+			"measures":{
+				"us":{
+					"amount":1.0,
+					"unitShort":"pinch",
+					"unitLong":"pinch"
+				},
+				"metric":{
+					"amount":1.0,
+					"unitShort":"pinch",
+					"unitLong":"pinch"
+				}
+			}
+		},
+		{
+			"id":1001001,
+			"aisle":"Milk, Eggs, Other Dairy",
+			"image":"butter.jpg",
+			"consitency":"solid",
+			"name":"salted butter",
+			"original":"1/4 cup salted butter",
+			"originalString":"1/4 cup salted butter",
+			"originalName":null,
+			"amount":0.25,
+			"unit":"cup",
+			"meta":[
+				"salted"
+			],
+			"metaInformation":[
+				"salted"
+			],
+			"measures":{
+				"us":{
+					"amount":0.25,
+					"unitShort":"cups",
+					"unitLong":"cups"
+				},
+				"metric":{
+					"amount":59.147,
+					"unitShort":"g",
+					"unitLong":"grams"
+				}
+			}
+		},
+		{
+			"id":19335,
+			"aisle":"Baking",
+			"image":"sugar-cubes.jpg",
+			"consitency":"solid",
+			"name":"sugar",
+			"original":"2 tbsp sugar",
+			"originalString":"2 tbsp sugar",
+			"originalName":null,
+			"amount":2.0,
+			"unit":"tbsp",
+			"meta":[
+			],
+			"metaInformation":[
+			],
+			"measures":{
+				"us":{
+					"amount":2.0,
+					"unitShort":"Tbsps",
+					"unitLong":"Tbsps"
+				},
+				"metric":{
+					"amount":2.0,
+					"unitShort":"Tbsps",
+					"unitLong":"Tbsps"
+				}
+			}
+		}
+	],
+"id":534573,
+"title":"Brown Butter Apple Crumble",
+"readyInMinutes":45,
+"servings":4,
+"image":"https://spoonacular.com/recipeImages/534573-556x370.jpg",
+"imageType":"jpg",
+"cuisines":[
+],
+"dishTypes":[
+],
+"diets":[
+	"lacto ovo vegetarian"
+],
+"occasions":[
+],
+"winePairing":{
+	"pairedWines":[
+		"cream sherry",
+		"moscato dasti",
+		"port"
+	],
+	"pairingText":"Crumble on the menu? Try pairing with Cream Sherry, Moscato d'Asti, and Port. A common wine pairing rule is to make sure your wine is sweeter than your food. Delicate desserts go well with Moscato d'Asti, nutty desserts with cream sherry, and caramel or chocolate desserts pair well with port. The NV Solera Cream Sherry with a 4.5 out of 5 star rating seems like a good match. It costs about 17 dollars per bottle.",
+	"productMatches":[
+		{
+			"id":428475,
+			"title":"NV Solera Cream Sherry",
+			"description":"The Solera Cream Sherry has a brilliant amber and deep copper hue. With butterscotch and pecan aromas, the sweet salted nut and brown spice aromas carry a complex caramel accent. A sweet entry leads to a rounded, lush, moderately full-bodied palate with a lengthy, flavorful finish.",
+			"price":"$16.99",
+			"imageUrl":"https://spoonacular.com/productImages/428475-312x231.jpg",
+			"averageRating":0.9,
+			"ratingCount":4.0,
+			"score":0.823076923076923,
+			"link":"https://www.amazon.com/NV-Solera-Cream-Sherry-750/dp/B00HSME8OW?tag=spoonacular-20"
+		}
+	]
+},
+"instructions":"Preheat oven to 350 degrees.In a medium bowl, combine the apples, sugar, cinnamon, cloves and salt. Toss until well-combined.Add the apples to a deep oval baking dish. Spread out into an even layer.In a small bowl, stir together the oats, flour and brown sugar. Set aside.Heat the butter in a small pan until melted. Continue swirling over a medium flame until the butter turns a golden brown color. Remove from heat and stir into the oats mixture until well combined.Sprinkle the oats mixture over the apples.Slide the baking dish into the oven and cook for 45 minutes, until golden on top and bubbling at the sides. Remove from the oven and let cool slightly before serving.",
+"analyzedInstructions":[
+	{
+		"name":"",
+		"steps":[
+			{
+				"number":1,
+				"step":"Preheat oven to 350 degrees.In a medium bowl, combine the apples, sugar, cinnamon, cloves and salt. Toss until well-combined.",
+				"ingredients":[
+					{
+						"id":2010,
+						"name":"cinnamon",
+						"image":"cinnamon.jpg"
+					},
+					{
+						"id":9003,
+						"name":"apple",
+						"image":"apple.jpg"
+					},
+					{
+						"id":19335,
+						"name":"sugar",
+						"image":"sugar-in-bowl.png"
+					},
+					{
+						"id":2047,
+						"name":"salt",
+						"image":"salt.jpg"
+					}
+				],
+				"equipment":[
+					{
+						"id":404783,
+						"name":"bowl",
+						"image":"bowl.jpg"
+					},
+					{
+						"id":404784,
+						"name":"oven",
+						"image":"oven.jpg"
+					}
+				]
+			},
+			{
+				"number":2,
+				"step":"Add the apples to a deep oval baking dish.",
+				"ingredients":[
+					{
+						"id":9003,
+						"name":"apple",
+						"image":"apple.jpg"
+					}
+				],
+				"equipment":[
+					{
+						"id":404646,
+						"name":"baking pan",
+						"image":"roasting-pan.jpg"
+					}
+				]
+			},
+			{
+				"number":3,
+				"step":"Spread out into an even layer.In a small bowl, stir together the oats, flour and brown sugar. Set aside.",
+				"ingredients":[
+					{
+						"id":19334,
+						"name":"brown sugar",
+						"image":"brown-sugar-dark.jpg"
+					},
+					{
+						"id":20081,
+						"name":"all purpose flour",
+						"image":"flour.png"
+					},
+					{
+						"id":8120,
+						"name":"oats",
+						"image":"rolled-oats.jpg"
+					}
+				],
+				"equipment":[
+					{
+						"id":404783,
+						"name":"bowl",
+						"image":"bowl.jpg"
+					}
+				]
+			},
+			{
+				"number":4,
+				"step":"Heat the butter in a small pan until melted. Continue swirling over a medium flame until the butter turns a golden brown color.",
+				"ingredients":[
+					{
+						"id":1001,
+						"name":"butter",
+						"image":"butter-sliced.jpg"
+					}
+				],
+				"equipment":[
+					{
+						"id":404645,
+						"name":"frying pan",
+						"image":"pan.png"
+					}
+				]
+			},
+			{
+				"number":5,
+				"step":"Remove from heat and stir into the oats mixture until well combined.Sprinkle the oats mixture over the apples.Slide the baking dish into the oven and cook for 45 minutes, until golden on top and bubbling at the sides.",
+				"ingredients":[
+					{
+						"id":9003,
+						"name":"apple",
+						"image":"apple.jpg"
+					},
+					{
+						"id":8120,
+						"name":"oats",
+						"image":"rolled-oats.jpg"
+					}
+				],
+				"equipment":[
+					{
+						"id":404646,
+						"name":"baking pan",
+						"image":"roasting-pan.jpg"
+					},
+					{
+						"id":404784,
+						"name":"oven",
+						"image":"oven.jpg"
+					}
+				],
+				"length":{
+					"number":45,
+					"unit":"minutes"
+				}
+			},
+			{
+				"number":6,
+				"step":"Remove from the oven and let cool slightly before serving.",
+				"ingredients":[
+				],
+				"equipment":[
+					{
+						"id":404784,
+						"name":"oven",
+						"image":"oven.jpg"
+					}
+				]
+			}
+		]
+	}
+],
+"creditsText":"Sarahs Cucina Bella"
+}

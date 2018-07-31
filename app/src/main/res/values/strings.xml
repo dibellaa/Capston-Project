@@ -3,4 +3,11 @@
     <string name="recipe_image_description">Recipe image</string>
     <string name="no_connection_msg">No network connection detected.</string>
     <string name="recipe_list_load_failed">Recipes list load failed!</string>
+    <string name="error_message">Failed to load recipes</string>
+    <string name="action_share">Share</string>
+    <string name="ingredients_label">Ingredients</string>
+    <string name="instructions_label">Instructions</string>
+    <string name="web_site_label">Web Site</string>
+    <string name="ingredients_image_description">Ingredient\'s image</string>
+    <string name="share_recipe_menu">Share Recipe</string>
 </resources>

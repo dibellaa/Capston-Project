@@ -1,11 +1,18 @@
 package com.udacity.adibella.whatsinmyfridge;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Build;
+import android.support.v4.app.ActivityOptionsCompat;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.DisplayMetrics;
+import android.view.View;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import com.mashape.p.spoonacularrecipefoodnutritionv1.Configuration;
 import com.mashape.p.spoonacularrecipefoodnutritionv1.SpoonacularAPIClient;
@@ -18,7 +25,6 @@ import com.udacity.adibella.whatsinmyfridge.adapter.RecipeAdapter;
 import com.udacity.adibella.whatsinmyfridge.model.Recipe;
 import com.udacity.adibella.whatsinmyfridge.util.JSONUtils;
 
-import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -28,12 +34,19 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import timber.log.Timber;
 
-public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnRecipeClickListener{
+public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnRecipeClickListener {
     @BindView(R.id.rv_recipes)
     RecyclerView recyclerView;
+    @BindView(R.id.swipe_refresh_layout)
+    SwipeRefreshLayout swipeRefreshLayout;
+    @BindView(R.id.tv_error_message)
+    TextView errorMessage;
+    @BindView(R.id.pb_loading_indicator)
+    ProgressBar progressBar;
     APIController controller;
     private RecipeAdapter recipeAdapter;
     private List<Recipe> recipes;
+    public static final String RECIPE_KEY = "recipe";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,14 +58,29 @@ public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnR
         recyclerView.setLayoutManager(layoutManager);
         recipeAdapter = new RecipeAdapter(R.layout.recipe_grid_item,this,this, new ArrayList<Recipe>());
         recyclerView.setAdapter(recipeAdapter);
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                refreshContent();
+            }
+        });
 
         recipes = new ArrayList<Recipe>();
+        progressBar.setVisibility(View.VISIBLE);
 //        loadRecipes(this);
         // used during development phase
         loadRecipesFromFiles(this);
     }
 
+    private void refreshContent() {
+        recipes.clear();
+        loadRecipesFromFiles(MainActivity.this);
+//        loadRecipes(MainActivity.this);
+        swipeRefreshLayout.setRefreshing(false);
+    }
+
     private void loadRecipesFromFiles(Context context) {
+        stopProgressBar();
         List<FindByIngredientsModel> findByIngredientsModels;
         findByIngredientsModels = JSONUtils.getRecipesByIngredientsFromFile(MainActivity.this);
         for (FindByIngredientsModel findByIngredientsModel : findByIngredientsModels) {
@@ -99,13 +127,35 @@ public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnR
                     recipes.add(recipe);
                 }
                 recipeAdapter.setRecipes(recipes);
+                showRecipes();
             }
 
             @Override
             public void onFailure(HttpContext context, Throwable error) {
                 Timber.d("Load recipes failed %s", error.getMessage());
+                if (recipes.isEmpty()) {
+                    showErrorMessage();
+                }
             }
         });
+    }
+
+    private void stopProgressBar() {
+        if (progressBar.getVisibility() == View.VISIBLE) {
+            progressBar.setVisibility(View.INVISIBLE);
+        }
+    }
+
+    private void showRecipes() {
+        stopProgressBar();
+        recyclerView.setVisibility(View.VISIBLE);
+        errorMessage.setVisibility(View.INVISIBLE);
+    }
+
+    private void showErrorMessage() {
+        stopProgressBar();
+        recyclerView.setVisibility(View.INVISIBLE);
+        errorMessage.setVisibility(View.VISIBLE);
     }
 
     private void getRecipeSummary(final Recipe recipe) {
@@ -147,11 +197,26 @@ public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnR
     }
 
     @Override
-    public void onRecipeSelected(int position) {
+    public void onRecipeSelected(View view, int position) {
         Timber.d("selected Recipe: " + position);
         Recipe selectedRecipe = recipes.get(position);
-//        Intent intent = new Intent(this, RecipeActivity.class);
-//        intent.putExtra(RECIPE_KEY, selectedRecipe);
-//        startActivity(intent);
+        Bundle bundle;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Timber.d("animation");
+            bundle = ActivityOptionsCompat
+                    .makeSceneTransitionAnimation(MainActivity.this, view , "recipe")
+                    .toBundle();
+        } else {
+            bundle = ActivityOptionsCompat
+                    .makeSceneTransitionAnimation(MainActivity.this)
+                    .toBundle();
+        }
+        Intent intent = new Intent(this, RecipeActivity.class);
+        intent.putExtra(RECIPE_KEY, selectedRecipe);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+            startActivity(intent,bundle);
+        } else {
+            startActivity(intent);
+        }
     }
 }

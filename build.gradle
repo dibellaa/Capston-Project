@@ -20,6 +20,15 @@ allprojects {
         google()
         jcenter()
     }
+
+    ext {
+        androidSupportVersion = "27.1.1"
+
+    }
+
+    tasks.withType(JavaCompile) {
+        options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+    }
 }
 
 task clean(type: Delete) {

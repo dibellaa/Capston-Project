@@ -1,0 +1,203 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nested_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <!-- The scrolling content -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="#fff"
+                android:elevation="@dimen/frame_layout_elevation"
+                tools:targetApi="lollipop">
+
+                <LinearLayout
+                    android:id="@+id/meta_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#333"
+                    android:layout_gravity="bottom"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/detail_inner_horiz_margin"
+                    android:paddingRight="@dimen/detail_inner_horiz_margin"
+                    android:paddingTop="@dimen/detail_metabar_vert_padding"
+                    android:paddingBottom="@dimen/detail_metabar_vert_padding"
+                    android:layout_marginBottom="@dimen/detail_metabar_vert_padding">
+
+                    <TextView
+                        android:id="@+id/tv_recipe_title"
+                        style="?android:attr/textAppearanceLarge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/detail_metabar_title_bottom_padding"
+                        android:fontFamily="sans-serif-condensed"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/detail_title_text_size"
+                        android:lineSpacingMultiplier="@fraction/detail_title_line_spacing_multiplier" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_recipe_summary"
+                    style="?android:attr/textAppearanceMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/detail_inner_horiz_margin"
+                    android:layout_marginRight="@dimen/detail_inner_horiz_margin"
+                    android:paddingBottom="@dimen/detail_body_bottom_margin"
+                    android:textColor="@color/colorSecondaryText"
+                    android:textColorLink="@color/colorAccent"
+                    android:textSize="@dimen/detail_body_text_size"
+                    android:lineSpacingMultiplier="@fraction/detail_body_line_spacing_multiplier" />
+
+                <TextView
+                    android:id="@+id/tv_ingredients_label"
+                    style="?android:attr/textAppearanceLarge"
+                    android:text="@string/ingredients_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/detail_inner_horiz_margin"
+                    android:layout_marginRight="@dimen/detail_inner_horiz_margin"
+                    android:paddingBottom="@dimen/padding_bottom"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/detail_body_text_size"
+                    android:lineSpacingMultiplier="@fraction/detail_title_line_spacing_multiplier" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_ingredients"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false"
+                    android:paddingBottom="@dimen/detail_body_bottom_margin"
+                    android:paddingLeft="@dimen/detail_inner_horiz_margin"
+                    android:paddingRight="@dimen/detail_inner_horiz_margin"
+                    android:scrollbarStyle="outsideOverlay" />
+
+                <TextView
+                    android:id="@+id/tv_instructions_label"
+                    style="?android:attr/textAppearanceLarge"
+                    android:text="@string/instructions_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/detail_inner_horiz_margin"
+                    android:layout_marginRight="@dimen/detail_inner_horiz_margin"
+                    android:paddingBottom="@dimen/padding_bottom"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/detail_body_text_size"
+                    android:lineSpacingMultiplier="@fraction/detail_title_line_spacing_multiplier" />
+
+                <TextView
+                    android:id="@+id/tv_instructions"
+                    style="?android:attr/textAppearanceMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/detail_inner_horiz_margin"
+                    android:layout_marginRight="@dimen/detail_inner_horiz_margin"
+                    android:paddingBottom="@dimen/detail_body_bottom_margin"
+                    android:textColor="@color/colorSecondaryText"
+                    android:textColorLink="@color/colorAccent"
+                    android:textSize="@dimen/detail_body_text_size"
+                    android:lineSpacingMultiplier="@fraction/detail_body_line_spacing_multiplier" />
+
+                <TextView
+                    android:id="@+id/tv_website_label"
+                    style="?android:attr/textAppearanceLarge"
+                    android:text="@string/web_site_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/detail_inner_horiz_margin"
+                    android:layout_marginRight="@dimen/detail_inner_horiz_margin"
+                    android:paddingBottom="@dimen/padding_bottom"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/detail_body_text_size"
+                    android:lineSpacingMultiplier="@fraction/detail_title_line_spacing_multiplier" />
+
+                <TextView
+                    android:id="@+id/tv_website"
+                    style="?android:attr/textAppearanceMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/detail_inner_horiz_margin"
+                    android:layout_marginRight="@dimen/detail_inner_horiz_margin"
+                    android:paddingBottom="@dimen/detail_body_bottom_margin"
+                    android:textColor="@color/colorSecondaryText"
+                    android:textColorLink="@color/colorAccent"
+                    android:textSize="@dimen/detail_body_text_size"
+                    android:lineSpacingMultiplier="@fraction/detail_body_line_spacing_multiplier" />
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/favorite_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            android:contentDescription="@string/action_share"
+            android:src="@drawable/ic_star_white_36dp"
+            app:elevation="@dimen/fab_elevation"
+            app:fabSize="normal"
+            app:pressedTranslationZ="@dimen/fab_press_translation_z"
+            app:layout_behavior="com.udacity.adibella.whatsinmyfridge.FABScrollBehavior"/>
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:contentScrim="?attr/colorPrimary"
+                app:collapsedTitleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse"
+                app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse"
+                app:expandedTitleMarginStart="@dimen/keyline_2"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <ImageView
+                    android:id="@+id/iv_recipe_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_collapseMode="parallax"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/recipe_image_description" />
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                    app:elevation="@dimen/toolbar_elevation"
+                    app:contentInsetStart="72dp"
+                    app:layout_collapseMode="pin"
+                    app:layout_scrollFlags="scroll|enterAlways"
+                    app:navigationIcon="@drawable/ic_arrow_left_white_24dp">
+            </android.support.v7.widget.Toolbar>
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+        </android.support.design.widget.AppBarLayout>
+    </android.support.design.widget.CoordinatorLayout>
+</FrameLayout>

@@ -38,7 +38,7 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
     }
 
     public interface OnRecipeClickListener {
-        void onRecipeSelected(int position);
+        void onRecipeSelected(View view, int position);
     }
 
     public void setRecipes(List<Recipe> recipes) {
@@ -97,7 +97,7 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
 
     class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         @BindView(R.id.iv_recipe_image)
-        ImageView recipeImage;
+        public ImageView recipeImage;
         @BindView(R.id.tv_recipe_name)
         TextView recipeName;
 
@@ -111,7 +111,7 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
         @Override
         public void onClick(View v) {
             int position = getAdapterPosition();
-            clickListener.onRecipeSelected(position);
+            clickListener.onRecipeSelected(v, position);
         }
     }
 }

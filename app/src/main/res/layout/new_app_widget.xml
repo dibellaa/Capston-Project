@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/widget"
+    android:background="@color/colorPrimary"
+    android:padding="@dimen/widget_margin">
+
+    <LinearLayout
+        android:id="@+id/section_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        style="@style/AppWidgetSection" >
+
+        <TextView
+            android:id="@+id/appwidget_title"
+            style="@style/AppWidgetLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:layout_gravity="center"
+            tools:text="Recipe title"/>
+
+        <ImageView android:id="@+id/iv_recipe_image"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/recipe_image_description"
+            tools:src="@drawable/default_image"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/section_ingredients"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/section_title"
+        style="@style/AppWidgetSection" >
+
+        <TextView
+            android:id="@+id/appwidget_ingredients_label"
+            style="@style/AppWidgetLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:text="@string/ingredients_label"/>
+
+        <TextView
+            android:id="@+id/appwidget_ingredients"
+            style="@style/AppWidgetText"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            tools:text="list of ingredients"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

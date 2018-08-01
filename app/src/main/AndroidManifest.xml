@@ -38,12 +38,29 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-        <activity android:name=".SettingsActivity"></activity>
+        <activity android:name=".SettingsActivity" />
+
+        <receiver android:name=".widget.NewAppWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/new_app_widget_info" />
+        </receiver>
+
+        <activity android:name=".widget.NewAppWidgetConfigureActivity">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+            </intent-filter>
+        </activity>
+
         <provider
-            android:authorities="com.udacity.adibella.whatsinmyfridge"
             android:name=".provider.RecipeProvider"
-            android:exported="true"
-            android:enabled="true"/>
+            android:authorities="com.udacity.adibella.whatsinmyfridge"
+            android:enabled="true"
+            android:exported="true" />
     </application>
 
 </manifest>

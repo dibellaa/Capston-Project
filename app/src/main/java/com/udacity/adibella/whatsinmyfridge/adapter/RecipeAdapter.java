@@ -36,7 +36,7 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
     }
 
     public interface OnRecipeClickListener {
-        void onRecipeSelected(View view, Recipe position);
+        void onRecipeSelected(View view, Recipe recipe);
     }
 
     public void setRecipes(List<Recipe> recipes) {

@@ -16,4 +16,20 @@
         <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
     </style>
 
+    <style name="AppWidgetSection" parent="@android:style/Widget">
+        <item name="android:padding">8dp</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:layout_marginLeft">12dp</item>
+        <item name="android:layout_marginRight">12dp</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="AppWidgetLabel" parent="AppWidgetText">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppWidgetText" parent="Base.TextAppearance.AppCompat.Subhead">
+        <item name="android:textColor">@color/colorPrimaryText</item>
+    </style>
+
 </resources>

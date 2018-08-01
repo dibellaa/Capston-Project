@@ -227,7 +227,7 @@ public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnR
         });
     }
 
-    private int numberOfColumns(Context context) {
+    public static int numberOfColumns(Context context) {
         DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
         float dpWidth = displayMetrics.widthPixels / displayMetrics.density;
         int scalingFactor = 200;

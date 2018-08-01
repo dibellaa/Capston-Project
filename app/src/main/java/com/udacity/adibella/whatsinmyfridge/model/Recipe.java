@@ -243,4 +243,14 @@ public class Recipe implements Parcelable {
                 new TypeToken<ArrayList<Ingredient>>(){}.getType());
         this.ingredients = ingredients;
     }
+
+    public String getIngredientsString() {
+        StringBuilder strBuilder = new StringBuilder();
+        for(Ingredient ingredient: this.getIngredients()) {
+            strBuilder.append(" - ")
+                    .append(ingredient.getOriginalString())
+                    .append("\n");
+        }
+        return strBuilder.toString();
+    }
 }

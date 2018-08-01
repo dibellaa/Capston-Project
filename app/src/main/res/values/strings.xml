@@ -17,4 +17,8 @@
     <string name="cb_title">Show Favorite Recipes</string>
     <string name="action_settings">Settings</string>
     <string name="error_message_no_favorite">There is not any favorite recipe</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="favorite_recipes">Favorite recipes</string>
+    <string name="widget_configuration_title">Pin favorite recipe</string>
 </resources>

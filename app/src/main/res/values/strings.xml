@@ -10,4 +10,10 @@
     <string name="web_site_label">Web Site</string>
     <string name="ingredients_image_description">Ingredient\'s image</string>
     <string name="share_recipe_menu">Share Recipe</string>
+    <string name="default_value_false_cb">false</string>
+    <string name="cb_key">show_favorites</string>
+    <string name="cb_summary_off">Off</string>
+    <string name="cb_summary_on">On</string>
+    <string name="cb_title">Show Favorites Recipes</string>
+    <string name="action_settings">Settings</string>
 </resources>

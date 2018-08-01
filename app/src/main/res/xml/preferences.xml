@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <CheckBoxPreference
+        android:defaultValue="@string/default_value_false_cb"
+        android:key="@string/cb_key"
+        android:summaryOff="@string/cb_summary_off"
+        android:summaryOn="@string/cb_summary_on"
+        android:title="@string/cb_title" />
+
+</PreferenceScreen>

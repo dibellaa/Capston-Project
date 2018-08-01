@@ -9,7 +9,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -43,10 +46,29 @@ public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnR
     TextView errorMessage;
     @BindView(R.id.pb_loading_indicator)
     ProgressBar progressBar;
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
     APIController controller;
     private RecipeAdapter recipeAdapter;
     private List<Recipe> recipes;
     public static final String RECIPE_KEY = "recipe";
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_activity_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch (id) {
+            case R.id.action_settings:
+                startActivity(new Intent(this, SettingsActivity.class));
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +76,9 @@ public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnR
         setContentView(R.layout.activity_main);
         Timber.d("Hello! MainActivity\n");
         ButterKnife.bind(this);
+
+        setSupportActionBar(toolbar);
+
         GridLayoutManager layoutManager = new GridLayoutManager(this, numberOfColumns(this));
         recyclerView.setLayoutManager(layoutManager);
         recipeAdapter = new RecipeAdapter(R.layout.recipe_grid_item,this,this, new ArrayList<Recipe>());

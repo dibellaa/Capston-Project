@@ -1,6 +1,9 @@
 package com.udacity.adibella.whatsinmyfridge.fragment;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.DatabaseUtils;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -34,6 +37,7 @@ import android.view.ViewTreeObserver;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
@@ -41,6 +45,7 @@ import com.udacity.adibella.whatsinmyfridge.MainActivity;
 import com.udacity.adibella.whatsinmyfridge.R;
 import com.udacity.adibella.whatsinmyfridge.adapter.IngredientAdapter;
 import com.udacity.adibella.whatsinmyfridge.model.Recipe;
+import com.udacity.adibella.whatsinmyfridge.provider.RecipeContract;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -119,7 +124,34 @@ public class RecipeFragment extends Fragment implements View.OnClickListener{
         favoriteFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Timber.d("Recipe added to favorites");
+                Timber.d("FAB action");
+                Cursor cursor = getActivity().getContentResolver().query(RecipeContract.RecipeEntry.CONTENT_URI,
+                        null,
+                        RecipeContract.RecipeEntry.COLUMN_RECIPE_ID + " = ? ",
+                        new String[] {String.valueOf(recipe.getId())},
+                        null);
+                if (cursor != null) {
+                    Timber.d(DatabaseUtils.dumpCursorToString(cursor));
+                    if (cursor.getCount() == 0) {
+                        ContentValues contentValues = new ContentValues();
+                        contentValues.put(RecipeContract.RecipeEntry.COLUMN_RECIPE_ID, recipe.getId());
+                        contentValues.put(RecipeContract.RecipeEntry.COLUMN_TITLE, recipe.getTitle());
+                        contentValues.put(RecipeContract.RecipeEntry.COLUMN_IMAGE, recipe.getImage());
+                        contentValues.put(RecipeContract.RecipeEntry.COLUMN_SUMMARY, recipe.getSummary());
+                        contentValues.put(RecipeContract.RecipeEntry.COLUMN_INGREDIENTS, recipe.getIngredientsGson());
+                        contentValues.put(RecipeContract.RecipeEntry.COLUMN_INSTRUCTIONS, recipe.getInstructions());
+                        contentValues.put(RecipeContract.RecipeEntry.COLUMN_SOURCE_URL, recipe.getSourceUrl());
+                        contentValues.put(RecipeContract.RecipeEntry.COLUMN_SOURCE_NAME, recipe.getSourceName());
+                        getActivity().getContentResolver().insert(RecipeContract.RecipeEntry.CONTENT_URI, contentValues);
+                        Toast.makeText(getContext(), "Recipe added to favorites", Toast.LENGTH_SHORT).show();
+                    } else {
+                        getActivity().getContentResolver().delete(RecipeContract.RecipeEntry.CONTENT_URI,
+                                RecipeContract.RecipeEntry.COLUMN_RECIPE_ID + " = ? ",
+                                new String[] {String.valueOf(recipe.getId())});
+                        Toast.makeText(getContext(), "Recipe removed from favorites", Toast.LENGTH_SHORT).show();
+                    }
+                    cursor.close();
+                }
             }
         });
 

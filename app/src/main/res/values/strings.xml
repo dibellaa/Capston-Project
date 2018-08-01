@@ -14,6 +14,6 @@
     <string name="cb_key">show_favorites</string>
     <string name="cb_summary_off">Off</string>
     <string name="cb_summary_on">On</string>
-    <string name="cb_title">Show Favorites Recipes</string>
+    <string name="cb_title">Show Favorite Recipes</string>
     <string name="action_settings">Settings</string>
 </resources>

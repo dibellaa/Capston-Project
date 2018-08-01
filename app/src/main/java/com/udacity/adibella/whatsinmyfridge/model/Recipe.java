@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -213,5 +214,10 @@ public class Recipe implements Parcelable {
     public void addRecipeSummaryFromFile(Context context) {
         JSONObject responseJson = JSONUtils.readRecipeSummaryFromFile(context, this);
         JSONUtils.getRecipeSummaryFromJson(this, responseJson);
+    }
+
+    public String getIngredientsGson() {
+        Gson gson = new Gson();
+        return gson.toJson(ingredients);
     }
 }

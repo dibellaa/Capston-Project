@@ -39,6 +39,11 @@
                 android:value=".MainActivity" />
         </activity>
         <activity android:name=".SettingsActivity"></activity>
+        <provider
+            android:authorities="com.udacity.adibella.whatsinmyfridge"
+            android:name=".provider.RecipeProvider"
+            android:exported="true"
+            android:enabled="true"/>
     </application>
 
 </manifest>

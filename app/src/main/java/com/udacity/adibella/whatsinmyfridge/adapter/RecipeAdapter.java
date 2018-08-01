@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.mashape.p.spoonacularrecipefoodnutritionv1.models.FindByIngredientsModel;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 import com.udacity.adibella.whatsinmyfridge.R;
@@ -21,7 +20,6 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import timber.log.Timber;
 
 public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder> {
     private final int layoutResourceId;
@@ -38,7 +36,7 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
     }
 
     public interface OnRecipeClickListener {
-        void onRecipeSelected(View view, int position);
+        void onRecipeSelected(View view, Recipe position);
     }
 
     public void setRecipes(List<Recipe> recipes) {
@@ -111,7 +109,8 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
         @Override
         public void onClick(View v) {
             int position = getAdapterPosition();
-            clickListener.onRecipeSelected(v, position);
+            Recipe recipe = recipes.get(position);
+            clickListener.onRecipeSelected(v, recipe);
         }
     }
 }

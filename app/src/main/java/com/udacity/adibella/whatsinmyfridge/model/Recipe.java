@@ -8,6 +8,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import com.google.gson.reflect.TypeToken;
 import com.mashape.p.spoonacularrecipefoodnutritionv1.models.DynamicResponse;
 import com.mashape.p.spoonacularrecipefoodnutritionv1.models.FindByIngredientsModel;
 import com.udacity.adibella.whatsinmyfridge.util.JSONUtils;
@@ -15,8 +16,11 @@ import com.udacity.adibella.whatsinmyfridge.util.JSONUtils;
 import org.json.JSONObject;
 
 import java.text.ParseException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+
+import timber.log.Timber;
 
 public class Recipe implements Parcelable {
     @SerializedName(JSONUtils.ID_KEY)
@@ -74,6 +78,17 @@ public class Recipe implements Parcelable {
             return new Recipe[size];
         }
     };
+
+    public Recipe(int id, String title, String image, String summary, String ingredients, String instructions, String sourceUrl, String sourceName) {
+        this.id = id;
+        this.title = title;
+        this.image = image;
+        this.summary = summary;
+        setIngredientsfromGson(ingredients);
+        this.instructions = instructions;
+        this.sourceUrl = sourceUrl;
+        this.sourceName = sourceName;
+    }
 
     public int describeContents() {
         return 0;
@@ -219,5 +234,13 @@ public class Recipe implements Parcelable {
     public String getIngredientsGson() {
         Gson gson = new Gson();
         return gson.toJson(ingredients);
+    }
+
+    public void setIngredientsfromGson(String ingredientsGson) {
+        Timber.d(ingredientsGson);
+        Gson gson = new Gson();
+        ArrayList<Ingredient> ingredients = gson.fromJson(ingredientsGson,
+                new TypeToken<ArrayList<Ingredient>>(){}.getType());
+        this.ingredients = ingredients;
     }
 }

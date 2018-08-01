@@ -82,6 +82,8 @@ public class RecipeFragment extends Fragment implements View.OnClickListener{
     private Recipe recipe;
     private IngredientAdapter ingredientAdapter;
 
+    private boolean isFavorited;
+
     public RecipeFragment() {
 
     }
@@ -121,36 +123,33 @@ public class RecipeFragment extends Fragment implements View.OnClickListener{
 
         ButterKnife.bind(this, rootView);
 
+        setFabIcon();
+
         favoriteFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Timber.d("FAB action");
-                Cursor cursor = getActivity().getContentResolver().query(RecipeContract.RecipeEntry.CONTENT_URI,
-                        null,
-                        RecipeContract.RecipeEntry.COLUMN_RECIPE_ID + " = ? ",
-                        new String[] {String.valueOf(recipe.getId())},
-                        null);
-                if (cursor != null) {
-                    Timber.d(DatabaseUtils.dumpCursorToString(cursor));
-                    if (cursor.getCount() == 0) {
-                        ContentValues contentValues = new ContentValues();
-                        contentValues.put(RecipeContract.RecipeEntry.COLUMN_RECIPE_ID, recipe.getId());
-                        contentValues.put(RecipeContract.RecipeEntry.COLUMN_TITLE, recipe.getTitle());
-                        contentValues.put(RecipeContract.RecipeEntry.COLUMN_IMAGE, recipe.getImage());
-                        contentValues.put(RecipeContract.RecipeEntry.COLUMN_SUMMARY, recipe.getSummary());
-                        contentValues.put(RecipeContract.RecipeEntry.COLUMN_INGREDIENTS, recipe.getIngredientsGson());
-                        contentValues.put(RecipeContract.RecipeEntry.COLUMN_INSTRUCTIONS, recipe.getInstructions());
-                        contentValues.put(RecipeContract.RecipeEntry.COLUMN_SOURCE_URL, recipe.getSourceUrl());
-                        contentValues.put(RecipeContract.RecipeEntry.COLUMN_SOURCE_NAME, recipe.getSourceName());
-                        getActivity().getContentResolver().insert(RecipeContract.RecipeEntry.CONTENT_URI, contentValues);
-                        Toast.makeText(getContext(), "Recipe added to favorites", Toast.LENGTH_SHORT).show();
-                    } else {
-                        getActivity().getContentResolver().delete(RecipeContract.RecipeEntry.CONTENT_URI,
-                                RecipeContract.RecipeEntry.COLUMN_RECIPE_ID + " = ? ",
-                                new String[] {String.valueOf(recipe.getId())});
-                        Toast.makeText(getContext(), "Recipe removed from favorites", Toast.LENGTH_SHORT).show();
-                    }
-                    cursor.close();
+                if (isFavorited) {
+                    getActivity().getContentResolver().delete(RecipeContract.RecipeEntry.CONTENT_URI,
+                            RecipeContract.RecipeEntry.COLUMN_RECIPE_ID + " = ? ",
+                            new String[] {String.valueOf(recipe.getId())});
+                    Toast.makeText(getContext(), "Recipe removed from favorites", Toast.LENGTH_SHORT).show();
+                    isFavorited = false;
+                    favoriteFab.setImageResource(R.drawable.ic_star_white_48dp);
+                } else {
+                    ContentValues contentValues = new ContentValues();
+                    contentValues.put(RecipeContract.RecipeEntry.COLUMN_RECIPE_ID, recipe.getId());
+                    contentValues.put(RecipeContract.RecipeEntry.COLUMN_TITLE, recipe.getTitle());
+                    contentValues.put(RecipeContract.RecipeEntry.COLUMN_IMAGE, recipe.getImage());
+                    contentValues.put(RecipeContract.RecipeEntry.COLUMN_SUMMARY, recipe.getSummary());
+                    contentValues.put(RecipeContract.RecipeEntry.COLUMN_INGREDIENTS, recipe.getIngredientsGson());
+                    contentValues.put(RecipeContract.RecipeEntry.COLUMN_INSTRUCTIONS, recipe.getInstructions());
+                    contentValues.put(RecipeContract.RecipeEntry.COLUMN_SOURCE_URL, recipe.getSourceUrl());
+                    contentValues.put(RecipeContract.RecipeEntry.COLUMN_SOURCE_NAME, recipe.getSourceName());
+                    getActivity().getContentResolver().insert(RecipeContract.RecipeEntry.CONTENT_URI, contentValues);
+                    Toast.makeText(getContext(), "Recipe added to favorites", Toast.LENGTH_SHORT).show();
+                    isFavorited = true;
+                    favoriteFab.setImageResource(R.drawable.ic_star_outline_white_48dp);
                 }
             }
         });
@@ -262,6 +261,25 @@ public class RecipeFragment extends Fragment implements View.OnClickListener{
         });
 
         return rootView;
+    }
+
+    private void setFabIcon() {
+        Cursor cursor = getActivity().getContentResolver().query(RecipeContract.RecipeEntry.CONTENT_URI,
+                null,
+                RecipeContract.RecipeEntry.COLUMN_RECIPE_ID + " = ? ",
+                new String[] {String.valueOf(recipe.getId())},
+                null);
+        if (cursor != null) {
+            Timber.d(DatabaseUtils.dumpCursorToString(cursor));
+            if (cursor.getCount() == 0) {
+                isFavorited = false;
+                favoriteFab.setImageResource(R.drawable.ic_star_white_48dp);
+            } else {
+                isFavorited = true;
+                favoriteFab.setImageResource(R.drawable.ic_star_outline_white_48dp);
+            }
+            cursor.close();
+        }
     }
 
     @Override

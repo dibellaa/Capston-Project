@@ -12,9 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53137254-3e08-42de-b3b4-5c95a3350f1d" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/provider/RecipeContract.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/provider/RecipeHelper.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/provider/RecipeProvider.java" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
@@ -24,10 +21,11 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/MainActivity.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/adapter/RecipeAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/adapter/RecipeAdapter.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/fragment/RecipeFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/fragment/RecipeFragment.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/model/Recipe.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/model/Recipe.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/ingredient_item.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/ingredient_item.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_recipe_detail.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_recipe_detail.xml" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -99,54 +97,64 @@
                 </provider>
               </entry>
             </file>
-            <file leaf-file-name="Recipe.java" pinned="false" current-in-tab="true">
+            <file leaf-file-name="Recipe.java" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/model/Recipe.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="797">
-                    <caret line="221" column="5" lean-forward="false" selection-start-line="221" selection-start-column="5" selection-end-line="221" selection-end-column="5" />
+                  <state relative-caret-position="146">
+                    <caret line="27" column="19" lean-forward="false" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
                     <folding>
                       <element signature="imports" expanded="true" />
-                      <element signature="e#2033#2034#0" expanded="true" />
-                      <element signature="e#2078#2079#0" expanded="true" />
-                      <element signature="e#2142#2143#0" expanded="true" />
-                      <element signature="e#2189#2190#0" expanded="true" />
-                      <element signature="e#2233#2234#0" expanded="true" />
-                      <element signature="e#2257#2258#0" expanded="true" />
-                      <element signature="e#3255#3256#0" expanded="true" />
-                      <element signature="e#3280#3281#0" expanded="true" />
-                      <element signature="e#3313#3314#0" expanded="true" />
-                      <element signature="e#3341#3342#0" expanded="true" />
-                      <element signature="e#3373#3374#0" expanded="true" />
-                      <element signature="e#3401#3402#0" expanded="true" />
-                      <element signature="e#3443#3444#0" expanded="true" />
-                      <element signature="e#3477#3478#0" expanded="true" />
-                      <element signature="e#3509#3510#0" expanded="true" />
-                      <element signature="e#3537#3538#0" expanded="true" />
-                      <element signature="e#3579#3580#0" expanded="true" />
-                      <element signature="e#3613#3614#0" expanded="true" />
-                      <element signature="e#3647#3648#0" expanded="true" />
-                      <element signature="e#3677#3678#0" expanded="true" />
-                      <element signature="e#3723#3724#0" expanded="true" />
-                      <element signature="e#3761#3762#0" expanded="true" />
-                      <element signature="e#3809#3810#0" expanded="true" />
-                      <element signature="e#3843#3844#0" expanded="true" />
-                      <element signature="e#3907#3908#0" expanded="true" />
-                      <element signature="e#3953#3954#0" expanded="true" />
-                      <element signature="e#3992#3993#0" expanded="true" />
-                      <element signature="e#4027#4028#0" expanded="true" />
-                      <element signature="e#4083#4084#0" expanded="true" />
-                      <element signature="e#4131#4132#0" expanded="true" />
-                      <element signature="e#4167#4168#0" expanded="true" />
-                      <element signature="e#4199#4200#0" expanded="true" />
-                      <element signature="e#4249#4250#0" expanded="true" />
-                      <element signature="e#4291#4292#0" expanded="true" />
-                      <element signature="e#4328#4329#0" expanded="true" />
-                      <element signature="e#4361#4362#0" expanded="true" />
-                      <element signature="e#4413#4414#0" expanded="true" />
-                      <element signature="e#4457#4458#0" expanded="true" />
-                      <element signature="e#4502#4503#0" expanded="true" />
-                      <element signature="e#4546#4547#0" expanded="true" />
+                      <element signature="e#2130#2131#0" expanded="true" />
+                      <element signature="e#2175#2176#0" expanded="true" />
+                      <element signature="e#2239#2240#0" expanded="true" />
+                      <element signature="e#2286#2287#0" expanded="true" />
+                      <element signature="e#2758#2759#0" expanded="true" />
+                      <element signature="e#2782#2783#0" expanded="true" />
+                      <element signature="e#3780#3781#0" expanded="true" />
+                      <element signature="e#3805#3806#0" expanded="true" />
+                      <element signature="e#3838#3839#0" expanded="true" />
+                      <element signature="e#3866#3867#0" expanded="true" />
+                      <element signature="e#3898#3899#0" expanded="true" />
+                      <element signature="e#3926#3927#0" expanded="true" />
+                      <element signature="e#3968#3969#0" expanded="true" />
+                      <element signature="e#4002#4003#0" expanded="true" />
+                      <element signature="e#4034#4035#0" expanded="true" />
+                      <element signature="e#4062#4063#0" expanded="true" />
+                      <element signature="e#4104#4105#0" expanded="true" />
+                      <element signature="e#4138#4139#0" expanded="true" />
+                      <element signature="e#4172#4173#0" expanded="true" />
+                      <element signature="e#4202#4203#0" expanded="true" />
+                      <element signature="e#4248#4249#0" expanded="true" />
+                      <element signature="e#4286#4287#0" expanded="true" />
+                      <element signature="e#4334#4335#0" expanded="true" />
+                      <element signature="e#4368#4369#0" expanded="true" />
+                      <element signature="e#4432#4433#0" expanded="true" />
+                      <element signature="e#4478#4479#0" expanded="true" />
+                      <element signature="e#4517#4518#0" expanded="true" />
+                      <element signature="e#4552#4553#0" expanded="true" />
+                      <element signature="e#4608#4609#0" expanded="true" />
+                      <element signature="e#4656#4657#0" expanded="true" />
+                      <element signature="e#4692#4693#0" expanded="true" />
+                      <element signature="e#4724#4725#0" expanded="true" />
+                      <element signature="e#4774#4775#0" expanded="true" />
+                      <element signature="e#4816#4817#0" expanded="true" />
+                      <element signature="e#4853#4854#0" expanded="true" />
+                      <element signature="e#4886#4887#0" expanded="true" />
+                      <element signature="e#4938#4939#0" expanded="true" />
+                      <element signature="e#4982#4983#0" expanded="true" />
+                      <element signature="e#5027#5028#0" expanded="true" />
+                      <element signature="e#5071#5072#0" expanded="true" />
                     </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="RecipeContract.java" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/provider/RecipeContract.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="147">
+                    <caret line="8" column="64" lean-forward="false" selection-start-line="8" selection-start-column="64" selection-end-line="8" selection-end-column="64" />
+                    <folding />
                   </state>
                 </provider>
               </entry>
@@ -164,8 +172,8 @@
             <file leaf-file-name="RecipeAdapter.java" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/adapter/RecipeAdapter.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="21">
-                    <caret line="40" column="41" lean-forward="false" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
+                  <state relative-caret-position="756">
+                    <caret line="112" column="52" lean-forward="false" selection-start-line="112" selection-start-column="52" selection-end-line="112" selection-end-column="52" />
                     <folding />
                   </state>
                 </provider>
@@ -203,10 +211,70 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="fragment_recipe_detail.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_recipe_detail.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="157" column="53" lean-forward="false" selection-start-line="157" selection-start-column="53" selection-end-line="157" selection-end-column="53" />
+              <folding>
+                <element signature="e#636#676#0" expanded="true" />
+                <element signature="e#1035#1066#0" expanded="true" />
+                <element signature="e#1491#1525#0" expanded="true" />
+                <element signature="e#1567#1601#0" expanded="true" />
+                <element signature="e#1641#1677#0" expanded="true" />
+                <element signature="e#1720#1756#0" expanded="true" />
+                <element signature="e#1805#1841#0" expanded="true" />
+                <element signature="e#2165#2209#0" expanded="true" />
+                <element signature="e#2423#2454#0" expanded="true" />
+                <element signature="e#2898#2932#0" expanded="true" />
+                <element signature="e#2980#3014#0" expanded="true" />
+                <element signature="e#3057#3091#0" expanded="true" />
+                <element signature="e#3258#3288#0" expanded="true" />
+                <element signature="e#3571#3598#0" expanded="true" />
+                <element signature="e#3758#3792#0" expanded="true" />
+                <element signature="e#3840#3874#0" expanded="true" />
+                <element signature="e#3917#3940#0" expanded="true" />
+                <element signature="e#4149#4179#0" expanded="true" />
+                <element signature="e#4597#4631#0" expanded="true" />
+                <element signature="e#4672#4706#0" expanded="true" />
+                <element signature="e#4748#4782#0" expanded="true" />
+                <element signature="e#5028#5056#0" expanded="true" />
+                <element signature="e#5216#5250#0" expanded="true" />
+                <element signature="e#5298#5332#0" expanded="true" />
+                <element signature="e#5375#5398#0" expanded="true" />
+                <element signature="e#5607#5637#0" expanded="true" />
+                <element signature="e#6043#6077#0" expanded="true" />
+                <element signature="e#6125#6159#0" expanded="true" />
+                <element signature="e#6202#6236#0" expanded="true" />
+                <element signature="e#6403#6433#0" expanded="true" />
+                <element signature="e#6712#6736#0" expanded="true" />
+                <element signature="e#6896#6930#0" expanded="true" />
+                <element signature="e#6978#7012#0" expanded="true" />
+                <element signature="e#7055#7078#0" expanded="true" />
+                <element signature="e#7287#7317#0" expanded="true" />
+                <element signature="e#7718#7752#0" expanded="true" />
+                <element signature="e#7800#7834#0" expanded="true" />
+                <element signature="e#7877#7911#0" expanded="true" />
+                <element signature="e#8078#8108#0" expanded="true" />
+                <element signature="e#8577#8596#0" expanded="true" />
+                <element signature="e#8636#8658#0" expanded="true" />
+                <element signature="e#8740#8762#0" expanded="true" />
+                <element signature="e#8832#8864#0" expanded="true" />
+                <element signature="e#9757#9775#0" expanded="true" />
+                <element signature="e#10192#10226#0" expanded="true" />
+                <element signature="e#10558#10584#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="RecipeActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/RecipeActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-54">
+            <state relative-caret-position="80">
               <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -218,33 +286,56 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-463">
-              <caret line="48" column="4" lean-forward="false" selection-start-line="48" selection-start-column="4" selection-end-line="49" selection-end-column="20" />
+            <state relative-caret-position="125">
+              <caret line="297" column="54" lean-forward="false" selection-start-line="297" selection-start-column="54" selection-end-line="297" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3286#3448#0" expanded="true" />
-                <element signature="e#3447#3448#0" expanded="true" />
-                <element signature="e#5370#5386#0" expanded="true" />
-                <element signature="e#8376#8435#0" expanded="true" />
-                <marker date="1533080520020" expanded="true" signature="9458:9464" ph="{...}" />
+                <element signature="e#3907#4069#0" expanded="true" />
+                <element signature="e#4068#4069#0" expanded="true" />
+                <element signature="e#4634#4642#0" expanded="true" />
+                <element signature="e#5736#5744#0" expanded="true" />
+                <element signature="e#6197#6213#0" expanded="true" />
+                <element signature="e#7697#7731#0" expanded="true" />
+                <element signature="e#7784#7806#0" expanded="true" />
+                <element signature="e#9235#9294#0" expanded="true" />
+                <element signature="e#11299#11343#0" expanded="true" />
+                <marker date="1533117107920" expanded="true" signature="10288:10294" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RecipeFragment.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="colors.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="4" column="38" lean-forward="false" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RecipeContract.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/provider/RecipeContract.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="8" column="64" lean-forward="false" selection-start-line="8" selection-start-column="64" selection-end-line="8" selection-end-column="64" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RecipeFragment.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/fragment/RecipeFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="140" column="108" lean-forward="false" selection-start-line="140" selection-start-column="108" selection-end-line="140" selection-end-column="108" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="525">
+              <caret line="25" column="41" lean-forward="true" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ingredient_item.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ingredient_item.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/ingredient_item.xml">
           <provider editor-type-id="android-designer2">
             <state />
@@ -262,7 +353,7 @@
       <file leaf-file-name="RecipeHelper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/provider/RecipeHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
+            <state relative-caret-position="546">
               <caret line="26" column="80" lean-forward="false" selection-start-line="26" selection-start-column="80" selection-end-line="26" selection-end-column="80" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -283,42 +374,6 @@
                 <element signature="e#2561#2562#0" expanded="true" />
                 <element signature="e#2588#2589#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_settings.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_settings.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="35" column="86" lean-forward="false" selection-start-line="35" selection-start-column="86" selection-end-line="35" selection-end-column="86" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SettingsActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/SettingsActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="27" column="55" lean-forward="false" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="55" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#823#847#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="16" column="41" lean-forward="false" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -348,6 +403,8 @@
       <find>updateStatusBar</find>
       <find>onRecipeSelected</find>
       <find>toolbar</find>
+      <find>loadRecipesFromFiles</find>
+      <find>stopProgressBar</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -3362,7 +3419,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/adapter/IngredientAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/integers.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/adapter/RecipeAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/transition/change_image_transform.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/transition/explode.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/recipe_activity_menu.xml" />
@@ -3371,27 +3427,29 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/fragment/SettingsFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/xml/preferences.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/main_activity_menu.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values-v21/styles.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_recipe_detail.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_settings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/SettingsActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/provider/RecipeContract.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/provider/RecipeHelper.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/provider/RecipeProvider.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/fragment/RecipeFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/model/Recipe.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/ingredient_item.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/adapter/RecipeAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/model/Recipe.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/provider/RecipeContract.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_recipe_detail.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/fragment/RecipeFragment.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="960" />
-    <option name="width" value="960" />
-    <option name="height" value="1032" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1911" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1098" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -3464,23 +3522,6 @@
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="whatsinmyfridge" type="cbb59c9e:AndroidPsiDirectoryNode" />
               <item name="provider" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Capston-Project" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-            </path>
-            <path>
-              <item name="Capston-Project" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
-            <path>
-              <item name="Capston-Project" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="values" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
             <path>
               <item name="Capston-Project" type="1abcf292:AndroidViewProjectNode" />
@@ -3699,8 +3740,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="960" y="0" width="960" height="1032" extended-state="0" />
-    <editor active="true" />
+    <frame x="1911" y="-9" width="1938" height="1098" extended-state="6" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291714" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291714" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -3710,15 +3750,16 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3074246" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28556034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291714" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291714" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32185146" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23642534" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34318182" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17185822" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3426724" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973147" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
@@ -3732,7 +3773,6 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291714" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -3808,14 +3848,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="38" lean-forward="false" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/adf7d9eb391c8ad36c82383383de4810/res/drawable/abc_ic_ab_back_material.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -3869,14 +3901,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
           <caret line="3" column="56" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/model/Ingredient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -4039,25 +4063,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_recipe_detail.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="200" column="8" lean-forward="false" selection-start-line="200" selection-start-column="8" selection-end-line="200" selection-end-column="53" />
-          <folding>
-            <element signature="e#10192#10226#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/fragment/SettingsFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="16" column="37" lean-forward="false" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -4067,8 +4078,8 @@
         <state relative-caret-position="374">
           <caret line="27" column="55" lean-forward="false" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="55" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#823#847#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#823#847#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -4092,56 +4103,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-463">
-          <caret line="48" column="4" lean-forward="false" selection-start-line="48" selection-start-column="4" selection-end-line="49" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3286#3448#0" expanded="true" />
-            <element signature="e#3447#3448#0" expanded="true" />
-            <element signature="e#5370#5386#0" expanded="true" />
-            <element signature="e#8376#8435#0" expanded="true" />
-            <marker date="1533080520020" expanded="true" signature="9458:9464" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/adapter/RecipeAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="40" column="41" lean-forward="false" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SpoonacularAPILib/src/main/java/com/mashape/p/spoonacularrecipefoodnutritionv1/Configuration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="18" column="33" lean-forward="false" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/provider/RecipeContract.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="45" lean-forward="false" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/provider/RecipeHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="26" column="80" lean-forward="false" selection-start-line="26" selection-start-column="80" selection-end-line="26" selection-end-column="80" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#401#402#0" expanded="true" />
-            <element signature="e#470#471#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -4168,76 +4134,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/RecipeActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-54">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/model/Recipe.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="797">
-          <caret line="221" column="5" lean-forward="false" selection-start-line="221" selection-start-column="5" selection-end-line="221" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2033#2034#0" expanded="true" />
-            <element signature="e#2078#2079#0" expanded="true" />
-            <element signature="e#2142#2143#0" expanded="true" />
-            <element signature="e#2189#2190#0" expanded="true" />
-            <element signature="e#2233#2234#0" expanded="true" />
-            <element signature="e#2257#2258#0" expanded="true" />
-            <element signature="e#3255#3256#0" expanded="true" />
-            <element signature="e#3280#3281#0" expanded="true" />
-            <element signature="e#3313#3314#0" expanded="true" />
-            <element signature="e#3341#3342#0" expanded="true" />
-            <element signature="e#3373#3374#0" expanded="true" />
-            <element signature="e#3401#3402#0" expanded="true" />
-            <element signature="e#3443#3444#0" expanded="true" />
-            <element signature="e#3477#3478#0" expanded="true" />
-            <element signature="e#3509#3510#0" expanded="true" />
-            <element signature="e#3537#3538#0" expanded="true" />
-            <element signature="e#3579#3580#0" expanded="true" />
-            <element signature="e#3613#3614#0" expanded="true" />
-            <element signature="e#3647#3648#0" expanded="true" />
-            <element signature="e#3677#3678#0" expanded="true" />
-            <element signature="e#3723#3724#0" expanded="true" />
-            <element signature="e#3761#3762#0" expanded="true" />
-            <element signature="e#3809#3810#0" expanded="true" />
-            <element signature="e#3843#3844#0" expanded="true" />
-            <element signature="e#3907#3908#0" expanded="true" />
-            <element signature="e#3953#3954#0" expanded="true" />
-            <element signature="e#3992#3993#0" expanded="true" />
-            <element signature="e#4027#4028#0" expanded="true" />
-            <element signature="e#4083#4084#0" expanded="true" />
-            <element signature="e#4131#4132#0" expanded="true" />
-            <element signature="e#4167#4168#0" expanded="true" />
-            <element signature="e#4199#4200#0" expanded="true" />
-            <element signature="e#4249#4250#0" expanded="true" />
-            <element signature="e#4291#4292#0" expanded="true" />
-            <element signature="e#4328#4329#0" expanded="true" />
-            <element signature="e#4361#4362#0" expanded="true" />
-            <element signature="e#4413#4414#0" expanded="true" />
-            <element signature="e#4457#4458#0" expanded="true" />
-            <element signature="e#4502#4503#0" expanded="true" />
-            <element signature="e#4546#4547#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/fragment/RecipeFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="140" column="108" lean-forward="false" selection-start-line="140" selection-start-column="108" selection-end-line="140" selection-end-column="108" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/ingredient_item.xml">
       <provider editor-type-id="android-designer2">
         <state />
@@ -4248,6 +4144,196 @@
           <folding>
             <element signature="e#1681#1704#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/adapter/RecipeAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="112" column="52" lean-forward="false" selection-start-line="112" selection-start-column="52" selection-end-line="112" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/RecipeActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/provider/RecipeHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="26" column="80" lean-forward="false" selection-start-line="26" selection-start-column="80" selection-end-line="26" selection-end-column="80" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#401#402#0" expanded="true" />
+            <element signature="e#470#471#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/model/Ingredient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/model/Recipe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="27" column="19" lean-forward="false" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2130#2131#0" expanded="true" />
+            <element signature="e#2175#2176#0" expanded="true" />
+            <element signature="e#2239#2240#0" expanded="true" />
+            <element signature="e#2286#2287#0" expanded="true" />
+            <element signature="e#2758#2759#0" expanded="true" />
+            <element signature="e#2782#2783#0" expanded="true" />
+            <element signature="e#3780#3781#0" expanded="true" />
+            <element signature="e#3805#3806#0" expanded="true" />
+            <element signature="e#3838#3839#0" expanded="true" />
+            <element signature="e#3866#3867#0" expanded="true" />
+            <element signature="e#3898#3899#0" expanded="true" />
+            <element signature="e#3926#3927#0" expanded="true" />
+            <element signature="e#3968#3969#0" expanded="true" />
+            <element signature="e#4002#4003#0" expanded="true" />
+            <element signature="e#4034#4035#0" expanded="true" />
+            <element signature="e#4062#4063#0" expanded="true" />
+            <element signature="e#4104#4105#0" expanded="true" />
+            <element signature="e#4138#4139#0" expanded="true" />
+            <element signature="e#4172#4173#0" expanded="true" />
+            <element signature="e#4202#4203#0" expanded="true" />
+            <element signature="e#4248#4249#0" expanded="true" />
+            <element signature="e#4286#4287#0" expanded="true" />
+            <element signature="e#4334#4335#0" expanded="true" />
+            <element signature="e#4368#4369#0" expanded="true" />
+            <element signature="e#4432#4433#0" expanded="true" />
+            <element signature="e#4478#4479#0" expanded="true" />
+            <element signature="e#4517#4518#0" expanded="true" />
+            <element signature="e#4552#4553#0" expanded="true" />
+            <element signature="e#4608#4609#0" expanded="true" />
+            <element signature="e#4656#4657#0" expanded="true" />
+            <element signature="e#4692#4693#0" expanded="true" />
+            <element signature="e#4724#4725#0" expanded="true" />
+            <element signature="e#4774#4775#0" expanded="true" />
+            <element signature="e#4816#4817#0" expanded="true" />
+            <element signature="e#4853#4854#0" expanded="true" />
+            <element signature="e#4886#4887#0" expanded="true" />
+            <element signature="e#4938#4939#0" expanded="true" />
+            <element signature="e#4982#4983#0" expanded="true" />
+            <element signature="e#5027#5028#0" expanded="true" />
+            <element signature="e#5071#5072#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/provider/RecipeContract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="8" column="64" lean-forward="false" selection-start-line="8" selection-start-column="64" selection-end-line="8" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="297" column="54" lean-forward="false" selection-start-line="297" selection-start-column="54" selection-end-line="297" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3907#4069#0" expanded="true" />
+            <element signature="e#4068#4069#0" expanded="true" />
+            <element signature="e#4634#4642#0" expanded="true" />
+            <element signature="e#5736#5744#0" expanded="true" />
+            <element signature="e#6197#6213#0" expanded="true" />
+            <element signature="e#7697#7731#0" expanded="true" />
+            <element signature="e#7784#7806#0" expanded="true" />
+            <element signature="e#9235#9294#0" expanded="true" />
+            <element signature="e#11299#11343#0" expanded="true" />
+            <marker date="1533117107920" expanded="true" signature="10288:10294" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="38" lean-forward="false" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_recipe_detail.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="157" column="53" lean-forward="false" selection-start-line="157" selection-start-column="53" selection-end-line="157" selection-end-column="53" />
+          <folding>
+            <element signature="e#636#676#0" expanded="true" />
+            <element signature="e#1035#1066#0" expanded="true" />
+            <element signature="e#1491#1525#0" expanded="true" />
+            <element signature="e#1567#1601#0" expanded="true" />
+            <element signature="e#1641#1677#0" expanded="true" />
+            <element signature="e#1720#1756#0" expanded="true" />
+            <element signature="e#1805#1841#0" expanded="true" />
+            <element signature="e#2165#2209#0" expanded="true" />
+            <element signature="e#2423#2454#0" expanded="true" />
+            <element signature="e#2898#2932#0" expanded="true" />
+            <element signature="e#2980#3014#0" expanded="true" />
+            <element signature="e#3057#3091#0" expanded="true" />
+            <element signature="e#3258#3288#0" expanded="true" />
+            <element signature="e#3571#3598#0" expanded="true" />
+            <element signature="e#3758#3792#0" expanded="true" />
+            <element signature="e#3840#3874#0" expanded="true" />
+            <element signature="e#3917#3940#0" expanded="true" />
+            <element signature="e#4149#4179#0" expanded="true" />
+            <element signature="e#4597#4631#0" expanded="true" />
+            <element signature="e#4672#4706#0" expanded="true" />
+            <element signature="e#4748#4782#0" expanded="true" />
+            <element signature="e#5028#5056#0" expanded="true" />
+            <element signature="e#5216#5250#0" expanded="true" />
+            <element signature="e#5298#5332#0" expanded="true" />
+            <element signature="e#5375#5398#0" expanded="true" />
+            <element signature="e#5607#5637#0" expanded="true" />
+            <element signature="e#6043#6077#0" expanded="true" />
+            <element signature="e#6125#6159#0" expanded="true" />
+            <element signature="e#6202#6236#0" expanded="true" />
+            <element signature="e#6403#6433#0" expanded="true" />
+            <element signature="e#6712#6736#0" expanded="true" />
+            <element signature="e#6896#6930#0" expanded="true" />
+            <element signature="e#6978#7012#0" expanded="true" />
+            <element signature="e#7055#7078#0" expanded="true" />
+            <element signature="e#7287#7317#0" expanded="true" />
+            <element signature="e#7718#7752#0" expanded="true" />
+            <element signature="e#7800#7834#0" expanded="true" />
+            <element signature="e#7877#7911#0" expanded="true" />
+            <element signature="e#8078#8108#0" expanded="true" />
+            <element signature="e#8577#8596#0" expanded="true" />
+            <element signature="e#8636#8658#0" expanded="true" />
+            <element signature="e#8740#8762#0" expanded="true" />
+            <element signature="e#8832#8864#0" expanded="true" />
+            <element signature="e#9757#9775#0" expanded="true" />
+            <element signature="e#10192#10226#0" expanded="true" />
+            <element signature="e#10558#10584#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/fragment/RecipeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="25" column="41" lean-forward="true" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>

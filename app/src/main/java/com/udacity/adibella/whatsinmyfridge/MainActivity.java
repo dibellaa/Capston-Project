@@ -1,9 +1,17 @@
 package com.udacity.adibella.whatsinmyfridge;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.database.Cursor;
+import android.database.DatabaseUtils;
 import android.os.Build;
+import android.preference.PreferenceManager;
 import android.support.v4.app.ActivityOptionsCompat;
+import android.support.v4.app.LoaderManager;
+import android.support.v4.content.AsyncTaskLoader;
+import android.support.v4.content.Loader;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -26,6 +34,7 @@ import com.mashape.p.spoonacularrecipefoodnutritionv1.models.DynamicResponse;
 import com.mashape.p.spoonacularrecipefoodnutritionv1.models.FindByIngredientsModel;
 import com.udacity.adibella.whatsinmyfridge.adapter.RecipeAdapter;
 import com.udacity.adibella.whatsinmyfridge.model.Recipe;
+import com.udacity.adibella.whatsinmyfridge.provider.RecipeContract;
 import com.udacity.adibella.whatsinmyfridge.util.JSONUtils;
 
 import java.util.ArrayList;
@@ -37,7 +46,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import timber.log.Timber;
 
-public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnRecipeClickListener {
+public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnRecipeClickListener,
+        LoaderManager.LoaderCallbacks<List<Recipe>>, SharedPreferences.OnSharedPreferenceChangeListener {
     @BindView(R.id.rv_recipes)
     RecyclerView recyclerView;
     @BindView(R.id.swipe_refresh_layout)
@@ -50,8 +60,10 @@ public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnR
     Toolbar toolbar;
     APIController controller;
     private RecipeAdapter recipeAdapter;
-    private List<Recipe> recipes;
     public static final String RECIPE_KEY = "recipe";
+    public static boolean PREFERENCES_UPDATED = false;
+    public static final int RECIPES_LOADER_ID = 0;
+    private boolean isFavoriteEnabled;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -90,21 +102,20 @@ public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnR
             }
         });
 
-        recipes = new ArrayList<Recipe>();
-        progressBar.setVisibility(View.VISIBLE);
-//        loadRecipes(this);
-        // used during development phase
-        loadRecipesFromFiles(this);
+        LoaderManager.LoaderCallbacks<List<Recipe>> callback = MainActivity.this;
+
+        getSupportLoaderManager().initLoader(RECIPES_LOADER_ID, null, callback);
+
+        PreferenceManager.getDefaultSharedPreferences(this).registerOnSharedPreferenceChangeListener(this);
     }
 
     private void refreshContent() {
-        recipes.clear();
-        loadRecipesFromFiles(MainActivity.this);
-//        loadRecipes(MainActivity.this);
+        getSupportLoaderManager().restartLoader(RECIPES_LOADER_ID, null, this);
         swipeRefreshLayout.setRefreshing(false);
     }
 
-    private void loadRecipesFromFiles(Context context) {
+    private List<Recipe> loadRecipesFromFiles(Context context) {
+        List<Recipe> recipes = new ArrayList<Recipe>();
         stopProgressBar();
         List<FindByIngredientsModel> findByIngredientsModels;
         findByIngredientsModels = JSONUtils.getRecipesByIngredientsFromFile(MainActivity.this);
@@ -117,7 +128,8 @@ public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnR
             getRecipeSummaryFromFile(recipe, MainActivity.this);
             recipes.add(recipe);
         }
-        recipeAdapter.setRecipes(recipes);
+        return recipes;
+//        recipeAdapter.setRecipes(recipes);
     }
 
     private void getRecipeSummaryFromFile(Recipe recipe, Context context) {
@@ -128,10 +140,12 @@ public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnR
         recipe.addRecipeInformationFromFile(context);
     }
 
-    private void loadRecipes(Context context) {
+    private List<Recipe> loadRecipes(Context context) {
+        final List<Recipe> recipes = new ArrayList<Recipe>();
+
         // Spoonacular API init
         Configuration.initialize(context);
-        SpoonacularAPIClient client = new SpoonacularAPIClient();
+        final SpoonacularAPIClient client = new SpoonacularAPIClient();
         controller = client.getClient();
         String ingredients = "apples,flour,sugar";
         Boolean limitLicense = false;
@@ -151,18 +165,15 @@ public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnR
                     getRecipeSummary(recipe);
                     recipes.add(recipe);
                 }
-                recipeAdapter.setRecipes(recipes);
-                showRecipes();
             }
 
             @Override
             public void onFailure(HttpContext context, Throwable error) {
                 Timber.d("Load recipes failed %s", error.getMessage());
-                if (recipes.isEmpty()) {
-                    showErrorMessage();
-                }
             }
         });
+
+        return recipes;
     }
 
     private void stopProgressBar() {
@@ -180,6 +191,11 @@ public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnR
     private void showErrorMessage() {
         stopProgressBar();
         recyclerView.setVisibility(View.INVISIBLE);
+        if (isFavoriteEnabled) {
+            errorMessage.setText(R.string.error_message_no_favorite);
+        } else {
+            errorMessage.setText(R.string.error_message);
+        }
         errorMessage.setVisibility(View.VISIBLE);
     }
 
@@ -222,9 +238,8 @@ public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnR
     }
 
     @Override
-    public void onRecipeSelected(View view, int position) {
-        Timber.d("selected Recipe: " + position);
-        Recipe selectedRecipe = recipes.get(position);
+    public void onRecipeSelected(View view, Recipe selectedRecipe) {
+        Timber.d("selected Recipe: " + selectedRecipe.toString());
         Bundle bundle;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Timber.d("animation");
@@ -243,5 +258,113 @@ public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnR
         } else {
             startActivity(intent);
         }
+    }
+
+    @SuppressLint("StaticFieldLeak")
+    @Override
+    public Loader<List<Recipe>> onCreateLoader(int id, Bundle args) {
+        return new AsyncTaskLoader<List<Recipe>>(this) {
+            List<Recipe> recipesData = null;
+
+            @Override
+            protected void onStartLoading() {
+                progressBar.setVisibility(View.VISIBLE);
+                if (recipesData != null) {
+                    deliverResult(recipesData);
+                } else {
+                    forceLoad();
+                }
+            }
+
+            public void deliverResult(List<Recipe> recipes) {
+                recipesData = recipes;
+                super.deliverResult(recipes);
+            }
+
+            @Override
+            public List<Recipe> loadInBackground() {
+                List<Recipe> returnRecipes = null;
+                SharedPreferences pref = PreferenceManager
+                        .getDefaultSharedPreferences(MainActivity.this);
+                isFavoriteEnabled = pref.getBoolean(MainActivity.this.getString(R.string.cb_key), false);
+                if (isFavoriteEnabled) {
+                    Cursor cursor = getContentResolver().query(RecipeContract.RecipeEntry.CONTENT_URI,
+                            null,
+                            null,
+                            null,
+                            null);
+                    if (cursor != null) {
+                        Timber.d(DatabaseUtils.dumpCursorToString(cursor));
+                        returnRecipes = new ArrayList<>();
+                        for (int i = 0; i < cursor.getCount(); ++i) {
+                            cursor.moveToPosition(i);
+                            int id = cursor.getInt(cursor.getColumnIndex(RecipeContract.RecipeEntry.COLUMN_RECIPE_ID));
+                            String title = cursor.getString(cursor.getColumnIndex(RecipeContract.RecipeEntry.COLUMN_TITLE));
+                            String image = cursor.getString(cursor.getColumnIndex(RecipeContract.RecipeEntry.COLUMN_IMAGE));
+                            String summary = cursor.getString(cursor.getColumnIndex(RecipeContract.RecipeEntry.COLUMN_SUMMARY));
+                            String ingredients = cursor.getString(cursor.getColumnIndex(RecipeContract.RecipeEntry.COLUMN_INGREDIENTS));
+                            Timber.d("ingredients: " + ingredients);
+                            String instructions = cursor.getString(cursor.getColumnIndex(RecipeContract.RecipeEntry.COLUMN_INSTRUCTIONS));
+                            Timber.d("instructions: " + instructions);
+                            String sourceUrl = cursor.getString(cursor.getColumnIndex(RecipeContract.RecipeEntry.COLUMN_SOURCE_URL));
+                            String sourceName = cursor.getString(cursor.getColumnIndex(RecipeContract.RecipeEntry.COLUMN_SOURCE_NAME));
+                            Recipe recipe = new Recipe(id,
+                                    title,
+                                    image,
+                                    summary,
+                                    ingredients,
+                                    instructions,
+                                    sourceUrl,
+                                    sourceName);
+                            Timber.d(recipe.toString());
+                            returnRecipes.add(recipe);
+                        }
+                        cursor.close();
+                    }
+                } else {
+                    // used during development phase
+                    returnRecipes = loadRecipesFromFiles(getContext());
+//                    returnRecipes = loadRecipes(getContext());
+                }
+                return returnRecipes;
+            }
+        };
+    }
+
+    @Override
+    public void onLoadFinished(Loader<List<Recipe>> loader, List<Recipe> data) {
+        if (data != null) {
+            recipeAdapter.setRecipes(data);
+            showRecipes();
+        } else {
+            showErrorMessage();
+        }
+
+    }
+
+    @Override
+    public void onLoaderReset(Loader<List<Recipe>> loader) {
+
+    }
+
+    @Override
+    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
+        PREFERENCES_UPDATED = true;
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if (PREFERENCES_UPDATED) {
+            Timber.d("Loader restarted after preferences updates");
+            getSupportLoaderManager().restartLoader(RECIPES_LOADER_ID, null, this);
+            PREFERENCES_UPDATED = false;
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        PreferenceManager.getDefaultSharedPreferences(this).unregisterOnSharedPreferenceChangeListener(this);
     }
 }

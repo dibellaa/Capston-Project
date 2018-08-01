@@ -155,7 +155,7 @@
             android:layout_gravity="bottom|end"
             android:layout_margin="@dimen/fab_margin"
             android:contentDescription="@string/action_share"
-            android:src="@drawable/ic_star_white_36dp"
+            android:src="@drawable/ic_star_white_48dp"
             app:elevation="@dimen/fab_elevation"
             app:fabSize="normal"
             app:pressedTranslationZ="@dimen/fab_press_translation_z"

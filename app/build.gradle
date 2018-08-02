@@ -15,6 +15,23 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+        debug {
+            applicationIdSuffix ".debug"
+        }
+    }
+
+    flavorDimensions 'version'
+    productFlavors {
+        free {
+            dimension "version"
+            applicationIdSuffix ".free"
+            versionNameSuffix "-demo"
+        }
+        paid {
+            dimension "version"
+            applicationIdSuffix ".paid"
+            versionNameSuffix "-demo"
+        }
     }
     packagingOptions {
         exclude 'META-INF/DEPENDENCIES'
@@ -25,6 +42,10 @@ android {
         exclude 'META-INF/NOTICE.txt'
         exclude 'META-INF/notice.txt'
         exclude 'META-INF/ASL2.0'
+    }
+    sourceSets {
+        free { res.srcDirs = ['src/free/res', 'src/free/res/'] } 
+        paid {res.srcDirs = ['src/paid/res', 'src/paid/res/'] }
     }
 }
 
@@ -52,4 +73,5 @@ dependencies {
     implementation "com.android.support:cardview-v7:$androidSupportVersion"
     implementation "com.android.support:preference-v7:$androidSupportVersion"
     implementation 'com.squareup.okhttp3:okhttp:3.7.0'
+    freeImplementation 'com.google.android.gms:play-services-ads:15.0.1'
 }

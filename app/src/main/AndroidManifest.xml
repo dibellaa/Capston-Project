@@ -58,7 +58,7 @@
 
         <provider
             android:name=".provider.RecipeProvider"
-            android:authorities="com.udacity.adibella.whatsinmyfridge"
+            android:authorities="${applicationId}.provider"
             android:enabled="true"
             android:exported="true" />
     </application>

@@ -58,6 +58,8 @@ public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnR
     SwipeRefreshLayout swipeRefreshLayout;
     @BindView(R.id.tv_error_message)
     TextView errorMessage;
+    @BindView(R.id.tv_error_message_no_favorite)
+    TextView errorMessageNoFavorites;
     @BindView(R.id.pb_loading_indicator)
     ProgressBar progressBar;
     @BindView(R.id.toolbar)
@@ -202,17 +204,19 @@ public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnR
         stopProgressBar();
         recyclerView.setVisibility(View.VISIBLE);
         errorMessage.setVisibility(View.INVISIBLE);
+        errorMessageNoFavorites.setVisibility(View.INVISIBLE);
     }
 
     private void showErrorMessage() {
         stopProgressBar();
         recyclerView.setVisibility(View.INVISIBLE);
-        if (isFavoriteEnabled) {
-            errorMessage.setText(R.string.error_message_no_favorite);
-        } else {
-            errorMessage.setText(R.string.error_message);
-        }
         errorMessage.setVisibility(View.VISIBLE);
+    }
+
+    private void showErrorMessageNoFavorites() {
+        stopProgressBar();
+        recyclerView.setVisibility(View.INVISIBLE);
+        errorMessageNoFavorites.setVisibility(View.VISIBLE);
     }
 
     private void getRecipeSummary(final Recipe recipe) {
@@ -305,7 +309,9 @@ public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnR
                             null);
                     if (cursor != null) {
                         Timber.d(DatabaseUtils.dumpCursorToString(cursor));
-                        returnRecipes = new ArrayList<>();
+                        if (cursor.getCount() > 0) {
+                            returnRecipes = new ArrayList<>();
+                        }
                         for (int i = 0; i < cursor.getCount(); ++i) {
                             cursor.moveToPosition(i);
                             int id = cursor.getInt(cursor.getColumnIndex(RecipeContract.RecipeEntry.COLUMN_RECIPE_ID));
@@ -313,9 +319,7 @@ public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnR
                             String image = cursor.getString(cursor.getColumnIndex(RecipeContract.RecipeEntry.COLUMN_IMAGE));
                             String summary = cursor.getString(cursor.getColumnIndex(RecipeContract.RecipeEntry.COLUMN_SUMMARY));
                             String ingredients = cursor.getString(cursor.getColumnIndex(RecipeContract.RecipeEntry.COLUMN_INGREDIENTS));
-                            Timber.d("ingredients: " + ingredients);
                             String instructions = cursor.getString(cursor.getColumnIndex(RecipeContract.RecipeEntry.COLUMN_INSTRUCTIONS));
-                            Timber.d("instructions: " + instructions);
                             String sourceUrl = cursor.getString(cursor.getColumnIndex(RecipeContract.RecipeEntry.COLUMN_SOURCE_URL));
                             String sourceName = cursor.getString(cursor.getColumnIndex(RecipeContract.RecipeEntry.COLUMN_SOURCE_NAME));
                             Recipe recipe = new Recipe(id,
@@ -347,7 +351,12 @@ public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnR
             recipeAdapter.setRecipes(data);
             showRecipes();
         } else {
-            showErrorMessage();
+            Timber.d("No data, %s", isFavoriteEnabled);
+            if (isFavoriteEnabled) {
+                showErrorMessageNoFavorites();
+            } else {
+                showErrorMessage();
+            }
         }
 
     }

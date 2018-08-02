@@ -17,41 +17,87 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53137254-3e08-42de-b3b4-5c95a3350f1d" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_customtabs_26_1_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_ads_15_0_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_ads_base_15_0_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_ads_identifier_15_0_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_ads_lite_15_0_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_15_0_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_gass_15_0_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/free/AndroidManifest.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/free/java/com/udacity/adibella/whatsinmyfridge/MainActivity.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/free/res/layout/activity_main.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/free/res/values/strings.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/paid/AndroidManifest.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/paid/java/com/udacity/adibella/whatsinmyfridge/MainActivity.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/paid/res/layout/activity_main.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/free/ic_launcher-web.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/free/res/drawable/ic_launcher_background.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/free/res/mipmap-anydpi-v26/ic_launcher.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/free/res/mipmap-anydpi-v26/ic_launcher_round.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/free/res/mipmap-hdpi/ic_launcher.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/free/res/mipmap-hdpi/ic_launcher_foreground.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/free/res/mipmap-hdpi/ic_launcher_round.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/free/res/mipmap-mdpi/ic_launcher.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/free/res/mipmap-mdpi/ic_launcher_foreground.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/free/res/mipmap-mdpi/ic_launcher_round.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/free/res/mipmap-xhdpi/ic_launcher.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/free/res/mipmap-xhdpi/ic_launcher_foreground.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/free/res/mipmap-xhdpi/ic_launcher_round.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/free/res/mipmap-xxhdpi/ic_launcher.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/free/res/mipmap-xxhdpi/ic_launcher_foreground.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/free/res/mipmap-xxhdpi/ic_launcher_round.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/free/res/mipmap-xxxhdpi/ic_launcher.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/free/res/mipmap-xxxhdpi/ic_launcher_foreground.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/free/res/mipmap-xxxhdpi/ic_launcher_round.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/free/res/values/ic_launcher_background.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/paid/ic_launcher-web.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/paid/res/mipmap-anydpi-v26/ic_launcher.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/paid/res/mipmap-anydpi-v26/ic_launcher_round.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/paid/res/mipmap-hdpi/ic_launcher.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/paid/res/mipmap-hdpi/ic_launcher_foreground.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/paid/res/mipmap-hdpi/ic_launcher_round.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/paid/res/mipmap-mdpi/ic_launcher.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/paid/res/mipmap-mdpi/ic_launcher_foreground.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/paid/res/mipmap-mdpi/ic_launcher_round.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/paid/res/mipmap-xhdpi/ic_launcher.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/paid/res/mipmap-xhdpi/ic_launcher_foreground.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/paid/res/mipmap-xhdpi/ic_launcher_round.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/paid/res/mipmap-xxhdpi/ic_launcher.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/paid/res/mipmap-xxhdpi/ic_launcher_foreground.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/paid/res/mipmap-xxhdpi/ic_launcher_round.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/paid/res/mipmap-xxxhdpi/ic_launcher.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/paid/res/mipmap-xxxhdpi/ic_launcher_foreground.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/paid/res/mipmap-xxxhdpi/ic_launcher_round.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/paid/res/values/ic_launcher_background.xml" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/jarAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/jarAnalysis.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskJars.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskJars.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" />
+      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/MainActivity.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/logo_blu.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/logo_white.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/src/free/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/free/AndroidManifest.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/free/java/com/udacity/adibella/whatsinmyfridge/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/free/java/com/udacity/adibella/whatsinmyfridge/MainActivity.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/free/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/free/res/layout/activity_main.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/ic_launcher-web.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/provider/RecipeContract.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/provider/RecipeContract.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/logo.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml-v17/new_app_widget_info.xml" afterPath="$PROJECT_DIR$/app/src/main/res/xml-v17/new_app_widget_info.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/new_app_widget_info.xml" afterPath="$PROJECT_DIR$/app/src/main/res/xml/new_app_widget_info.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/paid/AndroidManifest.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/src/paid/java/com/udacity/adibella/whatsinmyfridge/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/paid/java/com/udacity/adibella/whatsinmyfridge/MainActivity.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/paid/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/paid/res/layout/activity_main.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -108,17 +154,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/paid/AndroidManifest.xml">
-          <provider editor-type-id="android-manifest">
+      <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/free/res/layout/activity_main.xml">
+          <provider editor-type-id="android-designer2">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="10" column="35" lean-forward="false" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+            <state relative-caret-position="236">
+              <caret line="32" column="53" lean-forward="false" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
               <folding>
-                <element signature="e#476#494#0" expanded="true" />
-                <element signature="e#709#738#0" expanded="true" />
+                <element signature="e#780#814#0" expanded="true" />
+                <element signature="e#854#888#0" expanded="true" />
+                <element signature="e#921#961#0" expanded="true" />
+                <element signature="e#987#1010#0" expanded="true" />
+                <element signature="e#1098#1128#0" expanded="true" />
+                <element signature="e#1388#1422#0" expanded="true" />
+                <element signature="e#1462#1496#0" expanded="true" />
+                <element signature="e#1529#1569#0" expanded="true" />
+                <element signature="e#1718#1748#0" expanded="true" />
+                <element signature="e#1950#1975#0" expanded="true" />
+                <element signature="e#2054#2069#0" expanded="true" />
+                <element signature="e#2102#2142#0" expanded="true" />
+                <element signature="e#2464#2504#0" expanded="true" />
+                <element signature="e#2793#2823#0" expanded="true" />
+                <element signature="e#2860#2885#0" expanded="true" />
+                <element signature="e#2923#2948#0" expanded="true" />
+                <element signature="e#3244#3266#0" expanded="true" />
+                <element signature="e#3340#3366#0" expanded="true" />
+                <element signature="e#3927#3945#0" expanded="true" />
+                <element signature="e#4354#4387#0" expanded="true" />
+                <element signature="e#4435#4468#0" expanded="true" />
+                <element signature="e#4503#4529#0" expanded="true" />
+                <element signature="e#5013#5031#0" expanded="true" />
+                <element signature="e#5498#5525#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -127,15 +195,22 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/free/java/com/udacity/adibella/whatsinmyfridge/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="263" column="60" lean-forward="false" selection-start-line="263" selection-start-column="60" selection-end-line="263" selection-end-column="60" />
+            <state relative-caret-position="209">
+              <caret line="206" column="8" lean-forward="false" selection-start-line="206" selection-start-column="8" selection-end-line="206" selection-end-column="62" />
               <folding>
-                <element signature="e#4181#4343#0" expanded="true" />
-                <element signature="e#4342#4343#0" expanded="true" />
-                <element signature="e#4611#4654#0" expanded="true" />
-                <element signature="e#10237#10598#0" expanded="true" />
-                <element signature="e#10597#10598#0" expanded="true" />
+                <element signature="e#4268#4430#0" expanded="true" />
+                <element signature="e#4429#4430#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/paid/java/com/udacity/adibella/whatsinmyfridge/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="190" column="62" lean-forward="false" selection-start-line="190" selection-start-column="62" selection-end-line="190" selection-end-column="62" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -167,6 +242,11 @@
       <find>stopProgressBar</find>
       <find>onRecipeSelected</find>
       <find>toolbar</find>
+      <find>showEr</find>
+      <find>collapse</find>
+      <find>showErrorMessage</find>
+      <find>errorMessageNoFavorites</find>
+      <find>errorMessage</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -4752,7 +4832,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/provider/RecipeHelper.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/provider/RecipeProvider.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/ingredient_item.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/provider/RecipeContract.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_recipe_detail.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/fragment/RecipeFragment.java" />
@@ -4761,21 +4840,22 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/adapter/RecipeAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/model/Recipe.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/widget/NewAppWidgetConfigureActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/xml-v17/new_app_widget_info.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/xml/new_app_widget_info.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/new_app_widget.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/widget/NewAppWidget.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/new_app_widget_configure.xml" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/free/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/free/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/free/java/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/paid/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/paid/java/com/udacity/adibella/whatsinmyfridge/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/paid/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/free/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/paid/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/xml/new_app_widget_info.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/xml-v17/new_app_widget_info.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/provider/RecipeContract.java" />
+        <option value="$PROJECT_DIR$/app/src/free/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/paid/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/free/java/com/udacity/adibella/whatsinmyfridge/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/paid/java/com/udacity/adibella/whatsinmyfridge/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -4825,6 +4905,21 @@
               <item name="Capston-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="free" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Capston-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Capston-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="free" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Capston-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Capston-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -4833,7 +4928,90 @@
               <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Capston-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Capston-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="whatsinmyfridge" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Capston-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Capston-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="paid" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Capston-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Capston-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="paid" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Capston-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Capston-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="paid" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Capston-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Capston-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="paid" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="udacity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Capston-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Capston-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="paid" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="udacity" type="462c0819:PsiDirectoryNode" />
+              <item name="adibella" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Capston-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Capston-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="paid" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="udacity" type="462c0819:PsiDirectoryNode" />
+              <item name="adibella" type="462c0819:PsiDirectoryNode" />
+              <item name="whatsinmyfridge" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Capston-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Capston-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="paid" type="462c0819:PsiDirectoryNode" />
               <item name="res" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Capston-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Capston-Project" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="paid" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -5120,19 +5298,19 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291714" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17185822" sideWeight="0.5135542" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17185822" sideWeight="0.5139116" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32938644" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28525296" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28525296" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291714" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291714" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32185146" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17185822" sideWeight="0.48644578" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34230354" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17185822" sideWeight="0.48608837" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34230354" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973147" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
@@ -5190,69 +5368,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/ingredient_item.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="e#1681#1704#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/RecipeActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/provider/RecipeHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="26" column="80" lean-forward="false" selection-start-line="26" selection-start-column="80" selection-end-line="26" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/fragment/RecipeFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="25" column="41" lean-forward="false" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/logo_blu.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/logo_white.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/logo.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/default_image.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/logo.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -5370,34 +5485,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/widget/NewAppWidgetConfigureActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="33" column="73" lean-forward="false" selection-start-line="33" selection-start-column="73" selection-end-line="33" selection-end-column="73" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1810#1811#0" expanded="false" />
-            <element signature="e#1833#1834#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/xml-v17/new_app_widget_info.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/new_app_widget_info.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="44" lean-forward="false" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/widget/NewAppWidget.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -5413,17 +5500,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="840">
           <caret line="40" column="48" lean-forward="false" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/new_app_widget_configure.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="22" column="57" lean-forward="false" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
           <folding />
         </state>
       </provider>
@@ -5525,14 +5601,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/provider/RecipeContract.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="8" column="64" lean-forward="false" selection-start-line="8" selection-start-column="64" selection-end-line="8" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/model/Ingredient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
@@ -5549,16 +5617,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="72" column="72" lean-forward="false" selection-start-line="72" selection-start-column="72" selection-end-line="72" selection-end-column="72" />
-          <folding>
-            <marker date="1533201646135" expanded="true" signature="94:345" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/free/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
@@ -5572,17 +5630,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/free/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1638">
-          <caret line="78" column="13" lean-forward="false" selection-start-line="78" selection-start-column="13" selection-end-line="78" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
       <provider editor-type-id="android-designer2">
         <state />
@@ -5590,17 +5637,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
           <caret line="13" column="50" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="87" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/paid/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="79" column="16" lean-forward="false" selection-start-line="79" selection-start-column="16" selection-end-line="79" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -5613,10 +5649,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/paid/java/com/udacity/adibella/whatsinmyfridge/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/free/ic_launcher-web.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="55" column="26" lean-forward="false" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/free/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="63" lean-forward="false" selection-start-line="16" selection-start-column="63" selection-end-line="16" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/paid/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/logo.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/free/res/mipmap-hdpi/ic_launcher.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/free/res/mipmap-hdpi/ic_launcher_foreground.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/free/res/mipmap-hdpi/ic_launcher_round.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/free/res/mipmap-xxhdpi/ic_launcher_foreground.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/xml-v17/new_app_widget_info.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="21" lean-forward="false" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/new_app_widget_info.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="56" lean-forward="false" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="56" />
           <folding />
         </state>
       </provider>
@@ -5627,47 +5731,134 @@
       </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
-          <caret line="60" column="59" lean-forward="false" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="59" />
+          <caret line="60" column="58" lean-forward="false" selection-start-line="60" selection-start-column="58" selection-end-line="60" selection-end-column="58" />
+          <folding>
+            <element signature="e#476#494#0" expanded="false" />
+            <element signature="e#709#738#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="59" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="59" />
+          <folding>
+            <marker date="1533201646135" expanded="true" signature="94:345" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/widget/NewAppWidgetConfigureActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="127" column="35" lean-forward="false" selection-start-line="127" selection-start-column="35" selection-end-line="127" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/free/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/fragment/RecipeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="148" column="0" lean-forward="false" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/udacity/adibella/whatsinmyfridge/provider/RecipeContract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="8" column="50" lean-forward="false" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/adf7d9eb391c8ad36c82383383de4810/res/values/values.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="179" column="32" lean-forward="false" selection-start-line="179" selection-start-column="24" selection-end-line="179" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/new_app_widget_configure.xml">
+      <provider editor-type-id="android-designer2">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="71" column="59" lean-forward="false" selection-start-line="71" selection-start-column="59" selection-end-line="71" selection-end-column="59" />
+        <state relative-caret-position="362">
+          <caret line="55" column="53" lean-forward="false" selection-start-line="55" selection-start-column="53" selection-end-line="55" selection-end-column="53" />
+          <folding>
+            <element signature="e#1997#2032#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/free/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="32" column="53" lean-forward="false" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
+          <folding>
+            <element signature="e#780#814#0" expanded="true" />
+            <element signature="e#854#888#0" expanded="true" />
+            <element signature="e#921#961#0" expanded="true" />
+            <element signature="e#987#1010#0" expanded="true" />
+            <element signature="e#1098#1128#0" expanded="true" />
+            <element signature="e#1388#1422#0" expanded="true" />
+            <element signature="e#1462#1496#0" expanded="true" />
+            <element signature="e#1529#1569#0" expanded="true" />
+            <element signature="e#1718#1748#0" expanded="true" />
+            <element signature="e#1950#1975#0" expanded="true" />
+            <element signature="e#2054#2069#0" expanded="true" />
+            <element signature="e#2102#2142#0" expanded="true" />
+            <element signature="e#2464#2504#0" expanded="true" />
+            <element signature="e#2793#2823#0" expanded="true" />
+            <element signature="e#2860#2885#0" expanded="true" />
+            <element signature="e#2923#2948#0" expanded="true" />
+            <element signature="e#3244#3266#0" expanded="true" />
+            <element signature="e#3340#3366#0" expanded="true" />
+            <element signature="e#3927#3945#0" expanded="true" />
+            <element signature="e#4354#4387#0" expanded="true" />
+            <element signature="e#4435#4468#0" expanded="true" />
+            <element signature="e#4503#4529#0" expanded="true" />
+            <element signature="e#5013#5031#0" expanded="true" />
+            <element signature="e#5498#5525#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/paid/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="44" column="42" lean-forward="false" selection-start-line="44" selection-start-column="42" selection-end-line="44" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/free/java/com/udacity/adibella/whatsinmyfridge/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="263" column="60" lean-forward="false" selection-start-line="263" selection-start-column="60" selection-end-line="263" selection-end-column="60" />
+        <state relative-caret-position="209">
+          <caret line="206" column="8" lean-forward="false" selection-start-line="206" selection-start-column="8" selection-end-line="206" selection-end-column="62" />
           <folding>
-            <element signature="e#4181#4343#0" expanded="true" />
-            <element signature="e#4342#4343#0" expanded="true" />
-            <element signature="e#4611#4654#0" expanded="true" />
-            <element signature="e#10237#10598#0" expanded="true" />
-            <element signature="e#10597#10598#0" expanded="true" />
+            <element signature="e#4268#4430#0" expanded="true" />
+            <element signature="e#4429#4430#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/paid/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/paid/java/com/udacity/adibella/whatsinmyfridge/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="35" lean-forward="false" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-          <folding>
-            <element signature="e#476#494#0" expanded="true" />
-            <element signature="e#709#738#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="189">
+          <caret line="190" column="62" lean-forward="false" selection-start-line="190" selection-start-column="62" selection-end-line="190" selection-end-column="62" />
+          <folding />
         </state>
       </provider>
     </entry>

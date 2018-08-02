@@ -3,8 +3,10 @@ package com.udacity.adibella.whatsinmyfridge.provider;
 import android.net.Uri;
 import android.provider.BaseColumns;
 
+import com.udacity.adibella.whatsinmyfridge.BuildConfig;
+
 public class RecipeContract {
-    public static final String AUTHORITY = "com.udacity.adibella.whatsinmyfridge";
+    public static final String AUTHORITY = BuildConfig.APPLICATION_ID + ".provider";
     public static final Uri BASE_CONTENT_URI = Uri.parse("content://" + AUTHORITY);
     public static final String PATH_RECIPES = "favoriteRecipes";
 

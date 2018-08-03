@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -9,5 +10,27 @@
         android:summaryOff="@string/cb_summary_off"
         android:summaryOn="@string/cb_summary_on"
         android:title="@string/cb_title" />
+
+    <CheckBoxPreference
+        android:defaultValue="@string/default_value_false_cb"
+        android:key="@string/cb_key_license"
+        android:summaryOff="@string/cb_summary_false"
+        android:summaryOn="@string/cb_summary_true"
+        android:title="@string/cb_title_license" />
+
+    <com.h6ah4i.android.preference.NumberPickerPreferenceCompat
+        android:key="@string/pref_number_key"
+        android:title="@string/pref_number_recipes_search"
+        android:defaultValue="@integer/four"
+        app:nppc_maxValue="@integer/number_max_value"
+        app:nppc_minValue="@integer/number_min_value"
+        />
+
+    <ListPreference
+        android:defaultValue="@string/maximize_mode"
+        android:entries="@array/search_option"
+        android:entryValues="@array/search_option_value"
+        android:key="@string/search_option_key"
+        android:title="@string/search_option_label"/>
 
 </PreferenceScreen>

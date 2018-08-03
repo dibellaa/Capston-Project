@@ -343,8 +343,7 @@ public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnR
                     }
                 } else {
                     // used during development phase
-                    returnRecipes = loadRecipesFromFiles(getContext());
-//                    returnRecipes = loadRecipes(getContext());
+                    returnRecipes = loadRecipes(getContext());
                 }
                 return returnRecipes;
             }

@@ -21,4 +21,16 @@
     <string name="add_widget">Add widget</string>
     <string name="favorite_recipes">Favorite recipes</string>
     <string name="widget_configuration_title">Pin favorite recipe</string>
+    <string name="cb_key_license">limit_license_key</string>
+    <string name="cb_summary_false">False</string>
+    <string name="cb_summary_true">True</string>
+    <string name="cb_title_license">Show only recipes with an attribution license</string>
+    <string name="pref_number_recipes_search">Number of recipes to search</string>
+    <string name="pref_number_key">pref_number_key</string>
+    <string name="search_option_key">search_option_key</string>
+    <string name="search_option_label">Search mode</string>
+    <string name="maximize_mode">1</string>
+    <string name="minimize_mode">2</string>
+    <string name="maximize_mode_label">Maximize used ingredients</string>
+    <string name="minimize_mode_label">Minimize missing ingredients</string>
 </resources>

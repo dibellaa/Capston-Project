@@ -2,4 +2,7 @@
 <resources>
     <integer name="number_columns">1</integer>
     <integer name="number_lines">2</integer>
+    <integer name="four">4</integer>
+    <integer name="number_max_value">10</integer>
+    <integer name="number_min_value">1</integer>
 </resources>

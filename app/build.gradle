@@ -76,6 +76,7 @@ dependencies {
     freeImplementation 'com.google.android.gms:play-services-ads:15.0.1'
     implementation 'com.google.firebase:firebase-core:16.0.1'
     implementation 'com.google.firebase:firebase-analytics:16.0.1'
+    implementation 'com.h6ah4i.android.preference:numberpickerprefcompat:0.2.0'
 }
 
 apply plugin: 'com.google.gms.google-services'

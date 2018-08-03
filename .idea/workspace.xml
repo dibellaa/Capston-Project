@@ -15,7 +15,137 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Firebase" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53137254-3e08-42de-b3b4-5c95a3350f1d" name="Default" comment="" />
+    <list default="true" id="53137254-3e08-42de-b3b4-5c95a3350f1d" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/APIHelper$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/APIHelper$2.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/APIHelper.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/BuildConfig.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/Configuration.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/R$string.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/R.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/SpoonacularAPIClient.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$10.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$11.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$12$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$12.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$13.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$14.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$15$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$15.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$16.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$17.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$18$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$18.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$19.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$2.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$20.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$21$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$21.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$22.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$23.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$24$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$24.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$25.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$26.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$27$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$27.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$28.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$29.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$3$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$3.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$30$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$30.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$31.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$32.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$33$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$33.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$34.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$35.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$36$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$36.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$37.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$38.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$39$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$39.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$4.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$40.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$41.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$42$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$42.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$43.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$44$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$44.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$45.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$46.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$47$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$47.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$48.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$49$1$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$49$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$49.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$5.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$50.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$51.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$52$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$52.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$53.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$54.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$55$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$55.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$56.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$57.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$58$1$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$58$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$58.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$59.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$6$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$6.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$60.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$61$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$61.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$7.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$8.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$9$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController$9.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/APIController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/controllers/BaseController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/exceptions/APIException.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/http/client/APICallBack.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/http/client/HttpCallBack.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/http/client/HttpClient.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/http/client/HttpContext.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/http/client/VolleyClient$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/http/client/VolleyClient$2.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/http/client/VolleyClient$3.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/http/client/VolleyClient$VolleyHttpRequest.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/http/client/VolleyClient.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/http/request/HttpBodyRequest.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/http/request/HttpMethod.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/http/request/HttpRequest.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/http/response/HttpResponse.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/http/response/HttpStringResponse.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/models/Classifiedproduct.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/models/DynamicResponse.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/models/FindByIngredientsModel.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/models/Productjson.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/classes/debug/com/mashape/p/spoonacularrecipefoodnutritionv1/models/Productjsonarray.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/incremental/debug-mergeJniLibs/merge-state" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/incremental/mergeDebugShaders/merger.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/incremental/packageDebugAssets/merger.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/intermediate-jars/debug/classes.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/intermediate-jars/debug/res.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/javaPrecompile/debug/annotationProcessors.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpoonacularAPILib/build/intermediates/transforms/mergeJniLibs/debug/__content__.json" afterPath="" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -4856,7 +4986,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="2127" />
     <option name="y" value="-9" />
     <option name="width" value="960" />
@@ -5268,7 +5398,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1911" y="-9" width="1938" height="1098" extended-state="6" />
+    <frame x="1911" y="-9" width="1938" height="1098" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291714" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />

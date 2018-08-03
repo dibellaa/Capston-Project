@@ -8,6 +8,7 @@ import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.udacity.adibella.whatsinmyfridge.fragment.RecipeFragment;
 import com.udacity.adibella.whatsinmyfridge.model.Recipe;
 
@@ -16,6 +17,7 @@ import timber.log.Timber;
 public class RecipeActivity extends AppCompatActivity {
 
     private Recipe recipe;
+    private FirebaseAnalytics mFirebaseAnalytics;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +41,10 @@ public class RecipeActivity extends AppCompatActivity {
                     .add(R.id.fl_recipe_activity, recipeFragment)
                     .commit();
         }
+
+        WhatsInMyFridgeApplication application = (WhatsInMyFridgeApplication) getApplication();
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+        mFirebaseAnalytics.setAnalyticsCollectionEnabled(true);
     }
 
     @Override

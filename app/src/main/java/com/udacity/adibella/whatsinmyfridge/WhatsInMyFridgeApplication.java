@@ -1,6 +1,8 @@
 package com.udacity.adibella.whatsinmyfridge;
 
 import android.app.Application;
+import android.content.res.Resources;
+import android.support.annotation.NonNull;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -8,6 +10,8 @@ import org.jetbrains.annotations.Nullable;
 import timber.log.Timber;
 
 public class WhatsInMyFridgeApplication extends Application {
+    private static Resources mResources;
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -21,5 +25,7 @@ public class WhatsInMyFridgeApplication extends Application {
                         super.createStackElementTag(element));
             }
         });
+
+        mResources = this.getApplicationContext().getResources();
     }
 }

@@ -39,6 +39,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
 import com.udacity.adibella.whatsinmyfridge.MainActivity;
@@ -84,6 +85,8 @@ public class RecipeFragment extends Fragment implements View.OnClickListener{
 
     private boolean isFavorited;
 
+    private FirebaseAnalytics mFirebaseAnalytics;
+
     public RecipeFragment() {
 
     }
@@ -108,6 +111,10 @@ public class RecipeFragment extends Fragment implements View.OnClickListener{
                     .setType("text/plain")
                     .setText("Some sample text")
                     .getIntent(), getString(R.string.action_share)));
+            Bundle params = new Bundle();
+            params.putInt(FirebaseAnalytics.Param.ITEM_ID, recipe.getId());
+            params.putString(FirebaseAnalytics.Param.ITEM_NAME, recipe.getTitle());
+            mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SHARE, params);
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -123,6 +130,9 @@ public class RecipeFragment extends Fragment implements View.OnClickListener{
 
         ButterKnife.bind(this, rootView);
 
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(getContext());
+        mFirebaseAnalytics.setAnalyticsCollectionEnabled(true);
+
         setFabIcon();
 
         favoriteFab.setOnClickListener(new View.OnClickListener() {
@@ -135,7 +145,11 @@ public class RecipeFragment extends Fragment implements View.OnClickListener{
                             new String[] {String.valueOf(recipe.getId())});
                     Toast.makeText(getContext(), "Recipe removed from favorites", Toast.LENGTH_SHORT).show();
                     isFavorited = false;
-                    favoriteFab.setImageResource(R.drawable.ic_star_white_48dp);
+                    favoriteFab.setImageResource(R.drawable.ic_star_outline_white_48dp);
+                    Bundle params = new Bundle();
+                    params.putInt(FirebaseAnalytics.Param.ITEM_ID, recipe.getId());
+                    params.putString(FirebaseAnalytics.Param.ITEM_NAME, recipe.getTitle());
+                    mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.REMOVE_FROM_CART, params);
                 } else {
                     ContentValues contentValues = new ContentValues();
                     contentValues.put(RecipeContract.RecipeEntry.COLUMN_RECIPE_ID, recipe.getId());
@@ -149,7 +163,11 @@ public class RecipeFragment extends Fragment implements View.OnClickListener{
                     getActivity().getContentResolver().insert(RecipeContract.RecipeEntry.CONTENT_URI, contentValues);
                     Toast.makeText(getContext(), "Recipe added to favorites", Toast.LENGTH_SHORT).show();
                     isFavorited = true;
-                    favoriteFab.setImageResource(R.drawable.ic_star_outline_white_48dp);
+                    favoriteFab.setImageResource(R.drawable.ic_star_white_48dp);
+                    Bundle params = new Bundle();
+                    params.putInt(FirebaseAnalytics.Param.ITEM_ID, recipe.getId());
+                    params.putString(FirebaseAnalytics.Param.ITEM_NAME, recipe.getTitle());
+                    mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.ADD_TO_WISHLIST, params);
                 }
             }
         });
@@ -273,10 +291,10 @@ public class RecipeFragment extends Fragment implements View.OnClickListener{
             Timber.d(DatabaseUtils.dumpCursorToString(cursor));
             if (cursor.getCount() == 0) {
                 isFavorited = false;
-                favoriteFab.setImageResource(R.drawable.ic_star_white_48dp);
+                favoriteFab.setImageResource(R.drawable.ic_star_outline_white_48dp);
             } else {
                 isFavorited = true;
-                favoriteFab.setImageResource(R.drawable.ic_star_outline_white_48dp);
+                favoriteFab.setImageResource(R.drawable.ic_star_white_48dp);
             }
             cursor.close();
         }

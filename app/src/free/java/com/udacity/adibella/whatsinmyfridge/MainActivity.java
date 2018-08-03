@@ -29,6 +29,7 @@ import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.mashape.p.spoonacularrecipefoodnutritionv1.Configuration;
 import com.mashape.p.spoonacularrecipefoodnutritionv1.SpoonacularAPIClient;
 import com.mashape.p.spoonacularrecipefoodnutritionv1.controllers.APIController;
@@ -73,6 +74,7 @@ public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnR
     public static final int RECIPES_LOADER_ID = 0;
     private boolean isFavoriteEnabled;
     private InterstitialAd mInterstitialAd;
+    private FirebaseAnalytics mFirebaseAnalytics;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -125,6 +127,10 @@ public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnR
         getSupportLoaderManager().initLoader(RECIPES_LOADER_ID, null, callback);
 
         PreferenceManager.getDefaultSharedPreferences(this).registerOnSharedPreferenceChangeListener(this);
+
+        // Obtain the FirebaseAnalytics instance.
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+        mFirebaseAnalytics.setAnalyticsCollectionEnabled(true);
     }
 
     private void refreshContent() {

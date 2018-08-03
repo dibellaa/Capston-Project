@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_name">SpoonacularAPI</string>
-    <string name="preference_file_key">spoonacularapi_prefs</string>
-</resources>

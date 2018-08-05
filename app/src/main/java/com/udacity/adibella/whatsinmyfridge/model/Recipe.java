@@ -114,7 +114,7 @@ public class Recipe implements Parcelable {
                 ", title='" + title + '\'' +
                 ", image='" + image + '\'' +
                 ", summary='" + summary + '\'' +
-                ", ingredients=" + ingredients.toString() +
+                ", ingredients=" + ((ingredients == null) ? "null" : ingredients.toString()) +
                 ", instructions='" + instructions + '\'' +
                 ", sourceUrl='" + sourceUrl + '\'' +
                 ", sourceName='" + sourceName + '\'' +

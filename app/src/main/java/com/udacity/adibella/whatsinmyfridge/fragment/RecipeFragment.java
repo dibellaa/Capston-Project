@@ -5,9 +5,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.DatabaseUtils;
 import android.graphics.Bitmap;
-import android.graphics.Color;
 import android.graphics.Typeface;
-import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
@@ -33,7 +31,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewTreeObserver;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -47,6 +44,7 @@ import com.udacity.adibella.whatsinmyfridge.R;
 import com.udacity.adibella.whatsinmyfridge.adapter.IngredientAdapter;
 import com.udacity.adibella.whatsinmyfridge.model.Recipe;
 import com.udacity.adibella.whatsinmyfridge.provider.RecipeContract;
+import com.udacity.adibella.whatsinmyfridge.util.ListTagHandler;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -191,9 +189,9 @@ public class RecipeFragment extends Fragment implements View.OnClickListener{
             rootView.animate().alpha(1);
             tvRecipeTitle.setText(recipe.getTitle());
             if (Build.VERSION.SDK_INT >= 24) {
-                tvRecipeSummary.setText(Html.fromHtml(recipe.getSummary().replaceAll("(\r\n|\n)", "<br />"), Html.FROM_HTML_MODE_LEGACY));
+                tvRecipeSummary.setText(Html.fromHtml(recipe.getSummary(), Html.FROM_HTML_MODE_LEGACY, null, new ListTagHandler()));
             } else {
-                tvRecipeSummary.setText(Html.fromHtml(recipe.getSummary().replaceAll("(\r\n|\n)", "<br />")));
+                tvRecipeSummary.setText(Html.fromHtml(recipe.getSummary(), null, new ListTagHandler()));
             }
             tvRecipeSummary.setMovementMethod(LinkMovementMethod.getInstance());
             int imageWidth = (int) getResources().getDimension(R.dimen.image_width);
@@ -240,7 +238,16 @@ public class RecipeFragment extends Fragment implements View.OnClickListener{
                 tvInstructionsLabel.setVisibility(View.GONE);
                 tvInstructions.setVisibility(View.GONE);
             } else {
-                tvInstructions.setText(recipe.getInstructions().replaceAll("([.!?][ ]?)", "$1\n"));
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                    tvInstructions.setText(Html.fromHtml(recipe.getInstructions().replaceAll("([.!?][ ]?)", "$1\n"),
+                            Html.FROM_HTML_MODE_LEGACY,
+                            null,
+                            new ListTagHandler()));
+                } else {
+                    tvInstructions.setText(Html.fromHtml(recipe.getInstructions().replaceAll("([.!?][ ]?)", "$1\n"),
+                            null,
+                            new ListTagHandler()));
+                }
             }
             if (!recipe.getSourceUrl().equals("null")) {
                 String url = "<a href=\""+recipe.getSourceUrl()+"\">";

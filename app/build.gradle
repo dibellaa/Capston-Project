@@ -45,9 +45,20 @@ android {
         exclude 'META-INF/ASL2.0'
     }
     sourceSets {
-        free { res.srcDirs = ['src/free/res', 'src/free/res/'] } 
-        paid {res.srcDirs = ['src/paid/res', 'src/paid/res/'] }
+        free {
+            res.srcDirs = ['src/free/res']
+            java.srcDirs = ['src/free/java']
+        }
+        paid {
+            res.srcDirs = ['src/paid/res']
+            java.srcDirs = ['src/paid/java']
+        }
     }
+}
+
+sourceSets {
+    main.java.srcDirs = ['app/src/main/java']
+    main.resources.srcDirs = ['app/src/main/res']
 }
 
 dependencies {

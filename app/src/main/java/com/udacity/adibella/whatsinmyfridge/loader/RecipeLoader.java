@@ -130,10 +130,16 @@ public class RecipeLoader {
         Configuration.initialize(context);
         final SpoonacularAPIClient client = new SpoonacularAPIClient();
         controller = client.getClient();
+        SharedPreferences pref = PreferenceManager
+                .getDefaultSharedPreferences(context);
         String ingredients = "apples,flour,sugar";
-        Boolean limitLicense = false;
-        Integer number = 1;
-        Integer ranking = 1;
+        Boolean limitLicense = pref.getBoolean(context.getString(R.string.cb_key_license),
+                false);
+        Timber.d(String.valueOf(limitLicense));
+        Integer number = pref.getInt(context.getString(R.string.pref_number_key), 4);
+        Timber.d(number.toString());
+        Integer ranking = Integer.valueOf(pref.getString(context.getString(R.string.search_option_key),
+                "1"));
         // key-value map for optional query parameters
         Map<String, Object> queryParams = new LinkedHashMap<>();
         controller.findByIngredientsAsync(ingredients, limitLicense, number, ranking, queryParams, new APICallBack<List<FindByIngredientsModel>>() {

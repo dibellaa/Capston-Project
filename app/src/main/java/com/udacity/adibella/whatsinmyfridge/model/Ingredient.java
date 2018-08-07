@@ -6,6 +6,7 @@ import android.os.Parcelable;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import com.udacity.adibella.whatsinmyfridge.util.JSONUtils;
+import com.udacity.adibella.whatsinmyfridge.util.NetworkUtils;
 
 public class Ingredient implements Parcelable{
     @SerializedName(JSONUtils.ID_KEY)
@@ -101,6 +102,10 @@ public class Ingredient implements Parcelable{
 
     public String getImage() {
         return image;
+    }
+
+    public String getImageWithUrl() {
+        return NetworkUtils.buildIngredientImageUrl(image);
     }
 
     public void setImage(String image) {

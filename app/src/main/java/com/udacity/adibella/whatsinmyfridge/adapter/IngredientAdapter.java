@@ -1,6 +1,7 @@
 package com.udacity.adibella.whatsinmyfridge.adapter;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
@@ -14,6 +15,7 @@ import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 import com.udacity.adibella.whatsinmyfridge.R;
 import com.udacity.adibella.whatsinmyfridge.model.Ingredient;
+import com.udacity.adibella.whatsinmyfridge.provider.IngredientContract;
 import com.udacity.adibella.whatsinmyfridge.util.NetworkUtils;
 
 import java.util.List;
@@ -24,9 +26,16 @@ import butterknife.ButterKnife;
 public class IngredientAdapter extends RecyclerView.Adapter<IngredientAdapter.IngredientViewHolder> {
     private List<Ingredient> ingredients;
     private Context context;
+    private Cursor cursor;
 
     public IngredientAdapter() {
+        cursor = null;
+    }
 
+    public IngredientAdapter(Context context, Cursor cursor) {
+        this.context = context;
+        this.cursor = cursor;
+        ingredients = null;
     }
 
     @NonNull
@@ -40,11 +49,25 @@ public class IngredientAdapter extends RecyclerView.Adapter<IngredientAdapter.In
 
     @Override
     public void onBindViewHolder(@NonNull final IngredientAdapter.IngredientViewHolder holder, int position) {
-        Ingredient ingredient = ingredients.get(position);
-        holder.tvIngredient.setText(ingredient.getOriginalString());
-        if (!TextUtils.isEmpty(ingredient.getImage())) {
+        String text = "";
+        String image = "";
+        if (ingredients != null && cursor == null) {
+            Ingredient ingredient = ingredients.get(position);
+            text = ingredient.getOriginalString();
+            image = ingredient.getImage();
+        } else if (cursor != null && ingredients == null) {
+            if (!cursor.moveToPosition(position))
+                return;
+            text = cursor.getString(cursor.getColumnIndex(IngredientContract.IngredientEntry.COLUMN_NAME));
+            image = cursor.getString(cursor.getColumnIndex(IngredientContract.IngredientEntry.COLUMN_IMAGE));
+            long id = cursor.getLong(cursor.getColumnIndex(IngredientContract.IngredientEntry._ID));
+            holder.itemView.setTag(id);
+        }
+
+        holder.tvIngredient.setText(text);
+        if (!TextUtils.isEmpty(image)) {
             Picasso.get()
-                    .load(ingredient.getImage())
+                    .load(image)
                     .fit()
                     .placeholder(R.drawable.progress_animation)
                     .error(R.drawable.default_image)
@@ -71,10 +94,22 @@ public class IngredientAdapter extends RecyclerView.Adapter<IngredientAdapter.In
 
     @Override
     public int getItemCount() {
-        if (ingredients != null) {
+        if (ingredients != null && cursor == null) {
             return ingredients.size();
+        } else if (cursor != null && ingredients == null) {
+            return cursor.getCount();
         }
         return 0;
+    }
+
+    public void swapCursor(Cursor newCursor) {
+        if (cursor != null) {
+            cursor.close();
+        }
+        cursor = newCursor;
+        if (newCursor != null) {
+            this.notifyDataSetChanged();
+        }
     }
 
     class IngredientViewHolder extends RecyclerView.ViewHolder {
@@ -91,6 +126,9 @@ public class IngredientAdapter extends RecyclerView.Adapter<IngredientAdapter.In
 
     public void setIngredients(List<Ingredient> ingredients) {
         this.ingredients = ingredients;
+        if (cursor != null) {
+            cursor = null;
+        }
         notifyDataSetChanged();
     }
 }

@@ -33,4 +33,7 @@
     <string name="minimize_mode">2</string>
     <string name="maximize_mode_label">Maximize used ingredients</string>
     <string name="minimize_mode_label">Minimize missing ingredients</string>
+    <string name="ingredients_activity_title">Ingredients</string>
+    <string name="insert_an_ingredient_hint">Insert an ingredient</string>
+    <string name="add_button_text">ADD</string>
 </resources>

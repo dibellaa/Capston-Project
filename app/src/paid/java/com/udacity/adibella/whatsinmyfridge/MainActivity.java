@@ -63,6 +63,9 @@ public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnR
             case R.id.action_settings:
                 startActivity(new Intent(this, SettingsActivity.class));
                 return true;
+            case R.id.action_ingredients:
+                startActivity(new Intent(this, IngredientsActivity.class));
+                return true;
         }
         return super.onOptionsItemSelected(item);
     }

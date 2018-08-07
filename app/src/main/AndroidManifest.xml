@@ -38,6 +38,19 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
+        <activity android:name=".IngredientsActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName=".MainActivity">
+            <intent-filter android:scheme="http">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
         <activity android:name=".SettingsActivity" />
 
         <receiver android:name=".widget.NewAppWidget">
@@ -52,7 +65,7 @@
 
         <activity android:name=".widget.NewAppWidgetConfigureActivity">
             <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
             </intent-filter>
         </activity>
 
@@ -61,6 +74,7 @@
             android:authorities="${applicationId}.provider"
             android:enabled="true"
             android:exported="true" />
+
     </application>
 
 </manifest>

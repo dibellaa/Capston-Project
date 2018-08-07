@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.DatabaseUtils;
+import android.database.sqlite.SQLiteDatabase;
 import android.preference.PreferenceManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -20,6 +21,8 @@ import com.mashape.p.spoonacularrecipefoodnutritionv1.models.FindByIngredientsMo
 import com.udacity.adibella.whatsinmyfridge.R;
 import com.udacity.adibella.whatsinmyfridge.adapter.RecipeAdapter;
 import com.udacity.adibella.whatsinmyfridge.model.Recipe;
+import com.udacity.adibella.whatsinmyfridge.provider.IngredientContract;
+import com.udacity.adibella.whatsinmyfridge.provider.IngredientDBHelper;
 import com.udacity.adibella.whatsinmyfridge.provider.RecipeContract;
 import com.udacity.adibella.whatsinmyfridge.util.JSONUtils;
 
@@ -47,6 +50,10 @@ public class RecipeLoader {
     private APIController controller;
     private RecipeAdapter recipeAdapter;
 
+    private SQLiteDatabase mDb;
+    private IngredientDBHelper dbHelper;
+    private Cursor cursor;
+
     public RecipeLoader(Context context, RecyclerView recyclerView, TextView errorMessage, TextView errorMessageNoFavorites, ProgressBar progressBar) {
         this.context = context;
         recipes = new ArrayList<>();
@@ -55,6 +62,9 @@ public class RecipeLoader {
         this.errorMessageNoFavorites = errorMessageNoFavorites;
         this.progressBar = progressBar;
         recipeAdapter = (RecipeAdapter) this.recyclerView.getAdapter();
+        dbHelper = new IngredientDBHelper(context);
+        mDb = dbHelper.getReadableDatabase();
+        cursor = getAllIngredients();
     }
 
     public void startProgressBar() {
@@ -120,8 +130,8 @@ public class RecipeLoader {
             loadFavoriteRecipes(context);
         } else {
             // used during development phase
-            loadRecipesFromFiles(context);
-//            loadRecipes(context);
+//            loadRecipesFromFiles(context);
+            loadRecipes(context);
         }
     }
 
@@ -133,6 +143,10 @@ public class RecipeLoader {
         SharedPreferences pref = PreferenceManager
                 .getDefaultSharedPreferences(context);
         String ingredients = "apples,flour,sugar";
+        if (cursor != null) {
+            ingredients = getIngredientsString(cursor);
+            Timber.d(ingredients);
+        }
         Boolean limitLicense = pref.getBoolean(context.getString(R.string.cb_key_license),
                 false);
         Timber.d(String.valueOf(limitLicense));
@@ -252,5 +266,28 @@ public class RecipeLoader {
         }
         recipeAdapter.setRecipes(recipes);
         updateUI();
+    }
+
+    private Cursor getAllIngredients() {
+        return mDb.query(IngredientContract.IngredientEntry.TABLE_NAME,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null);
+    }
+
+    private String getIngredientsString(Cursor cursor) {
+        StringBuilder strBuilder = new StringBuilder();
+        String delimiter = ", ";
+        for (int i = 0; i < cursor.getCount(); ++i) {
+            cursor.moveToPosition(i);
+            strBuilder.append(cursor.getString(cursor.getColumnIndex(IngredientContract.IngredientEntry.COLUMN_NAME)));
+            if (i != cursor.getCount()-1) {
+                strBuilder.append(delimiter);
+            }
+        }
+        return strBuilder.toString();
     }
 }

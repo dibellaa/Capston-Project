@@ -5,8 +5,14 @@
     tools:context=".MainActivity">
 
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/action_ingredients"
         android:orderInCategory="1"
+        android:title="@string/ingredients_activity_title"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
         android:title="@string/action_settings"
         app:showAsAction="never" />
 

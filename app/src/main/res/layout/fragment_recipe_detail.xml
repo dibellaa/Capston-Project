@@ -191,7 +191,7 @@
                     android:layout_height="?actionBarSize"
                     android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
                     app:elevation="@dimen/toolbar_elevation"
-                    app:contentInsetStart="72dp"
+                    app:contentInsetStart="@dimen/toolbar_inset_start"
                     app:layout_collapseMode="pin"
                     app:layout_scrollFlags="scroll|enterAlways"
                     app:navigationIcon="@drawable/ic_arrow_left_white_24dp">

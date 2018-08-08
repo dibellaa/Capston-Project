@@ -166,6 +166,7 @@ public class IngredientsActivity extends AppCompatActivity {
         if (id == android.R.id.home) {
             onBackPressed();
             Timber.d("onBackPressed");
+            return true;
         }
         return super.onOptionsItemSelected(item);
     }
@@ -204,6 +205,9 @@ public class IngredientsActivity extends AppCompatActivity {
                         if (result > 0) {
                             ingredientAdapter.swapCursor(getAllIngredients());
                             Timber.d("ingredient added");
+                            if (!MainActivity.ingredientsExist) {
+                                MainActivity.INGREDIENTS_ADDED = true;
+                            }
                         }
                     } catch (ParseException e) {
                         e.printStackTrace();
@@ -242,7 +246,20 @@ public class IngredientsActivity extends AppCompatActivity {
     }
 
     private boolean removeIngredient(long id) {
-        return mDb.delete(IngredientContract.IngredientEntry.TABLE_NAME, IngredientContract.IngredientEntry._ID + "=" + id, null) > 0;
+        boolean removed;
+        removed = mDb.delete(IngredientContract.IngredientEntry.TABLE_NAME, IngredientContract.IngredientEntry._ID + "=" + id, null) > 0;
+        if (removed) {
+            Cursor cursor = getAllIngredients();
+            if (cursor != null) {
+                if (cursor.getCount() == 0) {
+                    if (MainActivity.ingredientsExist) {
+                        MainActivity.INGREDIENTS_REMOVED = true;
+                    }
+                }
+                cursor.close();
+            }
+        }
+        return removed;
     }
 
     private void getSuggestions(String s) {

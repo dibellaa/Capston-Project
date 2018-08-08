@@ -3,6 +3,7 @@ package com.udacity.adibella.whatsinmyfridge;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.Cursor;
 import android.os.Build;
 import android.preference.PreferenceManager;
 import android.support.v4.app.ActivityOptionsCompat;
@@ -16,6 +17,8 @@ import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -44,11 +47,19 @@ public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnR
     ProgressBar progressBar;
     @BindView(R.id.toolbar)
     Toolbar toolbar;
+    @BindView(R.id.no_ingredients_layout)
+    LinearLayout noIngredientsLayout;
+    @BindView(R.id.add_button)
+    Button addButton;
     private RecipeAdapter recipeAdapter;
     public static final String RECIPE_KEY = "recipe";
     public static boolean PREFERENCES_UPDATED = false;
     private FirebaseAnalytics mFirebaseAnalytics;
     private RecipeLoader recipeLoader;
+    public static boolean ingredientsExist;
+    public static boolean isFavoriteEnabled;
+    public static boolean INGREDIENTS_ADDED = false;
+    public static boolean INGREDIENTS_REMOVED = false;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -77,6 +88,14 @@ public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnR
         Timber.d("Hello! MainActivity\n");
         ButterKnife.bind(this);
 
+        addButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Timber.d("button clicked");
+                startActivity(new Intent(MainActivity.this, IngredientsActivity.class));
+            }
+        });
+
         setSupportActionBar(toolbar);
 
         GridLayoutManager layoutManager = new GridLayoutManager(this, numberOfColumns(this));
@@ -104,11 +123,21 @@ public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnR
                     progressBar);
         }
 
-        recipeLoader.updateRecipesRecyclerView(MainActivity.this);
+        Cursor cursor = recipeLoader.getAllIngredients();
+
+        ingredientsExist = false;
+        if (cursor != null) {
+            if (cursor.getCount() > 0) {
+                ingredientsExist = true;
+            }
+            cursor.close();
+        }
+
+        chooseLayout();
     }
 
     private void refreshContent() {
-        recipeLoader.updateRecipesRecyclerView(MainActivity.this);
+        chooseLayout();
         swipeRefreshLayout.setRefreshing(false);
     }
 
@@ -147,15 +176,38 @@ public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnR
 
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-        PREFERENCES_UPDATED = true;
+        if (!key.equals("App Restrictions")) {
+            PREFERENCES_UPDATED = true;
+        }
+        Timber.d(key);
     }
 
     @Override
     protected void onStart() {
         super.onStart();
         if (PREFERENCES_UPDATED) {
+            Timber.d("Loader restarted after preferences updates");
             recipeLoader.updateRecipesRecyclerView(MainActivity.this);
+            if (isFavoriteEnabled) {
+                hideNoIngredientsLayout();
+            } else {
+                if (!ingredientsExist) {
+                    showNoIngredientsLayout();
+                }
+            }
             PREFERENCES_UPDATED = false;
+        }
+        if (INGREDIENTS_REMOVED) {
+            showNoIngredientsLayout();
+            ingredientsExist = false;
+            INGREDIENTS_REMOVED = false;
+        }
+        if (INGREDIENTS_ADDED) {
+            Timber.d("ingredients added");
+            hideNoIngredientsLayout();
+            recipeLoader.updateRecipesRecyclerView(MainActivity.this);
+            ingredientsExist = true;
+            INGREDIENTS_ADDED = false;
         }
     }
 
@@ -163,5 +215,29 @@ public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnR
     protected void onDestroy() {
         super.onDestroy();
         PreferenceManager.getDefaultSharedPreferences(this).unregisterOnSharedPreferenceChangeListener(this);
+    }
+
+    private void showNoIngredientsLayout() {
+        hideAllViewsForNoIngredientsLayout();
+        noIngredientsLayout.setVisibility(View.VISIBLE);
+    }
+
+    private void hideAllViewsForNoIngredientsLayout() {
+        errorMessageNoFavorites.setVisibility(View.INVISIBLE);
+        errorMessage.setVisibility(View.INVISIBLE);
+        progressBar.setVisibility(View.INVISIBLE);
+        recyclerView.setVisibility(View.INVISIBLE);
+    }
+
+    private void hideNoIngredientsLayout() {
+        noIngredientsLayout.setVisibility(View.INVISIBLE);
+    }
+
+    private void chooseLayout() {
+        if (ingredientsExist) {
+            recipeLoader.updateRecipesRecyclerView(MainActivity.this);
+        } else {
+            showNoIngredientsLayout();
+        }
     }
 }

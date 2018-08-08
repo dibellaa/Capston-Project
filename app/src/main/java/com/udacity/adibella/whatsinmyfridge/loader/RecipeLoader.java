@@ -18,6 +18,7 @@ import com.mashape.p.spoonacularrecipefoodnutritionv1.http.client.APICallBack;
 import com.mashape.p.spoonacularrecipefoodnutritionv1.http.client.HttpContext;
 import com.mashape.p.spoonacularrecipefoodnutritionv1.models.DynamicResponse;
 import com.mashape.p.spoonacularrecipefoodnutritionv1.models.FindByIngredientsModel;
+import com.udacity.adibella.whatsinmyfridge.MainActivity;
 import com.udacity.adibella.whatsinmyfridge.R;
 import com.udacity.adibella.whatsinmyfridge.adapter.RecipeAdapter;
 import com.udacity.adibella.whatsinmyfridge.model.Recipe;
@@ -126,6 +127,7 @@ public class RecipeLoader {
         SharedPreferences pref = PreferenceManager
                 .getDefaultSharedPreferences(context);
         isFavoriteEnabled = pref.getBoolean(context.getString(R.string.cb_key), false);
+        MainActivity.isFavoriteEnabled = isFavoriteEnabled;
         if (isFavoriteEnabled) {
             loadFavoriteRecipes(context);
         } else {
@@ -142,10 +144,14 @@ public class RecipeLoader {
         controller = client.getClient();
         SharedPreferences pref = PreferenceManager
                 .getDefaultSharedPreferences(context);
-        String ingredients = "apples,flour,sugar";
+        String ingredients = "";
         if (cursor != null) {
             ingredients = getIngredientsString(cursor);
             Timber.d(ingredients);
+        }
+        if (ingredients.equals("")) {
+            stopProgressBar();
+            return;
         }
         Boolean limitLicense = pref.getBoolean(context.getString(R.string.cb_key_license),
                 false);
@@ -268,7 +274,7 @@ public class RecipeLoader {
         updateUI();
     }
 
-    private Cursor getAllIngredients() {
+    public Cursor getAllIngredients() {
         return mDb.query(IngredientContract.IngredientEntry.TABLE_NAME,
                 null,
                 null,
@@ -279,6 +285,7 @@ public class RecipeLoader {
     }
 
     private String getIngredientsString(Cursor cursor) {
+        Timber.d("get str builder");
         StringBuilder strBuilder = new StringBuilder();
         String delimiter = ", ";
         for (int i = 0; i < cursor.getCount(); ++i) {
@@ -288,6 +295,7 @@ public class RecipeLoader {
                 strBuilder.append(delimiter);
             }
         }
+        Timber.d(strBuilder.toString());
         return strBuilder.toString();
     }
 }

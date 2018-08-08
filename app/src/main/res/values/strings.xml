@@ -36,4 +36,6 @@
     <string name="ingredients_activity_title">Ingredients</string>
     <string name="insert_an_ingredient_hint">Insert an ingredient</string>
     <string name="add_button_text">ADD</string>
+    <string name="add_ingredients_button_text">Start adding your ingredients!</string>
+    <string name="add_ingredients_content_description">Icon to add new ingredients</string>
 </resources>

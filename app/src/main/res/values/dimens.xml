@@ -38,4 +38,6 @@ http://developer.android.com/guide/topics/appwidgets/index.html#CreatingLayout
     <dimen name="widget_margin">8dp</dimen>
     <dimen name="toolbar_inset_start">72dp</dimen>
     <dimen name="button_margin">8dp</dimen>
+    <dimen name="image_dim">200dp</dimen>
+    <dimen name="top_margin">100dp</dimen>
 </resources>

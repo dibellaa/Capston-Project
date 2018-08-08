@@ -141,7 +141,7 @@ public class RecipeFragment extends Fragment implements View.OnClickListener{
                     getActivity().getContentResolver().delete(RecipeContract.RecipeEntry.CONTENT_URI,
                             RecipeContract.RecipeEntry.COLUMN_RECIPE_ID + " = ? ",
                             new String[] {String.valueOf(recipe.getId())});
-                    Toast.makeText(getContext(), "Recipe removed from favorites", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), R.string.recipe_removed_from_favorites, Toast.LENGTH_SHORT).show();
                     isFavorited = false;
                     favoriteFab.setImageResource(R.drawable.ic_star_outline_white_48dp);
                     Bundle params = new Bundle();
@@ -159,7 +159,7 @@ public class RecipeFragment extends Fragment implements View.OnClickListener{
                     contentValues.put(RecipeContract.RecipeEntry.COLUMN_SOURCE_URL, recipe.getSourceUrl());
                     contentValues.put(RecipeContract.RecipeEntry.COLUMN_SOURCE_NAME, recipe.getSourceName());
                     getActivity().getContentResolver().insert(RecipeContract.RecipeEntry.CONTENT_URI, contentValues);
-                    Toast.makeText(getContext(), "Recipe added to favorites", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), R.string.resource_added_to_favorites, Toast.LENGTH_SHORT).show();
                     isFavorited = true;
                     favoriteFab.setImageResource(R.drawable.ic_star_white_48dp);
                     Bundle params = new Bundle();

@@ -1,5 +1,6 @@
 package com.udacity.adibella.whatsinmyfridge.widget;
 
+import android.annotation.SuppressLint;
 import android.appwidget.AppWidgetManager;
 import android.content.Context;
 import android.content.Intent;
@@ -8,6 +9,9 @@ import android.database.Cursor;
 import android.database.DatabaseUtils;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.LoaderManager;
+import android.support.v4.content.AsyncTaskLoader;
+import android.support.v4.content.Loader;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
@@ -30,13 +34,15 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import timber.log.Timber;
 
-public class NewAppWidgetConfigureActivity extends AppCompatActivity implements RecipeAdapter.OnRecipeClickListener {
+public class NewAppWidgetConfigureActivity extends AppCompatActivity implements RecipeAdapter.OnRecipeClickListener,
+        LoaderManager.LoaderCallbacks<List<Recipe>> {
     private static final String PREFS_NAME = "com.udacity.whatsinmyfridge.NewAppWidget";
     private static final String PREF_PREFIX_KEY = "appwidget_";
     private int widgetId = AppWidgetManager.INVALID_APPWIDGET_ID;
 
+    public static final int RECIPES_LOADER_ID = 0;
+
     private RecipeAdapter recipeAdapter;
-    private List<Recipe> recipes;
 
     @BindView(R.id.widget_error_message)
     TextView errorMessage;
@@ -85,15 +91,12 @@ public class NewAppWidgetConfigureActivity extends AppCompatActivity implements 
             return;
         }
 
-        loadRecipes();
+        LoaderManager.LoaderCallbacks<List<Recipe>> callback = NewAppWidgetConfigureActivity.this;
+        getSupportLoaderManager().initLoader(RECIPES_LOADER_ID, null, callback);
     }
 
-    private void loadRecipes() {
-        if (recipes != null) {
-            recipes.clear();
-        } else {
-            recipes = new ArrayList<>();
-        }
+    private List<Recipe> loadRecipes() {
+        List<Recipe> returnRecipes = new ArrayList<>();
         Cursor cursor = getContentResolver().query(RecipeContract.RecipeEntry.CONTENT_URI,
                 null,
                 null,
@@ -121,15 +124,16 @@ public class NewAppWidgetConfigureActivity extends AppCompatActivity implements 
                             sourceUrl,
                             sourceName);
                     Timber.d(recipe.toString());
-                    recipes.add(recipe);
+                    returnRecipes.add(recipe);
                 }
-                recipeAdapter.setRecipes(recipes);
             } else {
-                loadErrorMessage();
+                return null;
             }
             cursor.close();
+        } else {
+            return null;
         }
-        Timber.d("Cursor is null");
+        return returnRecipes;
     }
 
     private void loadErrorMessage() {
@@ -159,9 +163,6 @@ public class NewAppWidgetConfigureActivity extends AppCompatActivity implements 
 
     private void saveWidgetRecipe(Context context, int widgetId, Recipe recipeSelected) {
         SharedPreferences.Editor prefs = context.getSharedPreferences(PREFS_NAME, MODE_PRIVATE).edit();
-//        prefs.putString(PREF_PREFIX_KEY + widgetId + RecipeContract.RecipeEntry.COLUMN_TITLE, recipeSelected.getTitle());
-//        prefs.putString(PREF_PREFIX_KEY + widgetId + RecipeContract.RecipeEntry.COLUMN_IMAGE, recipeSelected.getImage());
-//        prefs.putString(PREF_PREFIX_KEY + widgetId + RecipeContract.RecipeEntry.COLUMN_INGREDIENTS, recipeSelected.getIngredientsGson());
         Gson gson = new Gson();
         String jsonRecipe = gson.toJson(recipeSelected);
         prefs.putString(PREF_PREFIX_KEY + widgetId, jsonRecipe);
@@ -180,5 +181,48 @@ public class NewAppWidgetConfigureActivity extends AppCompatActivity implements 
         SharedPreferences.Editor prefs = context.getSharedPreferences(PREFS_NAME, MODE_PRIVATE).edit();
         prefs.remove(PREF_PREFIX_KEY + widgetId);
         prefs.apply();
+    }
+
+    @SuppressLint("StaticFieldLeak")
+    @Override
+    public Loader<List<Recipe>> onCreateLoader(int id, Bundle args) {
+        return new AsyncTaskLoader<List<Recipe>>(this) {
+
+            List<Recipe> recipeData = null;
+
+            @Override
+            protected void onStartLoading() {
+                if (recipeData != null) {
+                    deliverResult(recipeData);
+                } else {
+                    forceLoad();
+                }
+            }
+
+            public void deliverResult(List<Recipe> recipes) {
+                recipeData = recipes;
+                super.deliverResult(recipes);
+            }
+
+            @Override
+            public List<Recipe> loadInBackground() {
+                return loadRecipes();
+            }
+        };
+    }
+
+    @Override
+    public void onLoadFinished(Loader<List<Recipe>> loader, List<Recipe> data) {
+        if (data == null) {
+            loadErrorMessage();
+        } else {
+            loadLabel();
+        }
+        recipeAdapter.setRecipes(data);
+    }
+
+    @Override
+    public void onLoaderReset(Loader<List<Recipe>> loader) {
+
     }
 }

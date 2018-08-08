@@ -38,4 +38,6 @@
     <string name="add_button_text">ADD</string>
     <string name="add_ingredients_button_text">Start adding your ingredients!</string>
     <string name="add_ingredients_content_description">Icon to add new ingredients</string>
+    <string name="recipe_removed_from_favorites">Recipe removed from favorites</string>
+    <string name="resource_added_to_favorites">Recipe added to favorites</string>
 </resources>

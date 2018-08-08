@@ -176,6 +176,7 @@ public class RecipeLoader {
                     recipes.add(recipe);
                 }
                 recipeAdapter.setRecipes(recipes);
+                recyclerView.getLayoutManager().onRestoreInstanceState(MainActivity.savedRecyclerLayoutState );
                 updateUI();
             }
 

@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.os.Build;
+import android.os.Parcelable;
 import android.preference.PreferenceManager;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -35,6 +36,8 @@ import timber.log.Timber;
 
 public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnRecipeClickListener,
         SharedPreferences.OnSharedPreferenceChangeListener {
+    private static final String BUNDLE_RECYCLER_LAYOUT = "recipes_recycler";
+    public static Parcelable savedRecyclerLayoutState;
     @BindView(R.id.rv_recipes)
     RecyclerView recyclerView;
     @BindView(R.id.swipe_refresh_layout)
@@ -79,6 +82,23 @@ public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnR
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        if (savedInstanceState != null) {
+            Timber.d("restore instance state");
+            savedRecyclerLayoutState = savedInstanceState.getParcelable(BUNDLE_RECYCLER_LAYOUT);
+            recyclerView.getLayoutManager().onRestoreInstanceState(savedRecyclerLayoutState);
+        }
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Timber.d("save instance state");
+        outState.putParcelable(BUNDLE_RECYCLER_LAYOUT, recyclerView.getLayoutManager().onSaveInstanceState());
     }
 
     @Override

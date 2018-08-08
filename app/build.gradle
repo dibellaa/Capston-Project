@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'key0'
+            keyPassword 'password'
+            storeFile file('keystore.jks')
+            storePassword 'password'
+        }
+    }
     compileSdkVersion 27
     defaultConfig {
         applicationId "com.udacity.adibella.whatsinmyfridge"
@@ -11,10 +19,19 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    dataBinding {
+        enabled false
+    }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+            debuggable false
         }
         debug {
             applicationIdSuffix ".debug"
@@ -24,14 +41,14 @@ android {
     flavorDimensions 'version'
     productFlavors {
         free {
-            dimension "version"
+            dimension 'version'
             applicationIdSuffix ".free"
-            versionNameSuffix "-demo"
+            versionNameSuffix "-free"
         }
         paid {
-            dimension "version"
+            dimension 'version'
             applicationIdSuffix ".paid"
-            versionNameSuffix "-demo"
+            versionNameSuffix "-paid"
         }
     }
     packagingOptions {

@@ -36,3 +36,14 @@ The app use Google Analytics for Firebase in order to track how it is used.
 You must have the file google-services.json in app/ folder.
 
 For more information on how to add Google Analytics for Android [here](https://firebase.google.com/docs/analytics/android/start/) the link.
+
+# Screenshot
+
+<p align="left">
+ <img src="https://github.com/dibellaa/Capston-Project/tree/master/Screenshots/1.PNG" height="500"/>
+<img src="https://github.com/dibellaa/Capston-Project/tree/master/Screenshots/2.PNG" height="500"/>
+<img src="https://github.com/dibellaa/Capston-Project/tree/master/Screenshots/3.PNG" height="500"/>
+<img src="https://github.com/dibellaa/Capston-Project/tree/master/Screenshots/4.PNG" height="500"/>
+<img src="https://github.com/dibellaa/Capston-Project/tree/master/Screenshots/5.PNG" height="500"/>
+<img src="https://github.com/dibellaa/Capston-Project/tree/master/Screenshots/6.PNG" height="500"/>
+</p>
